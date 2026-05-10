@@ -138,18 +138,6 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12 px-4 mt-20">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-base sm:text-lg">
-            © 2024 BdGovCheck. All rights reserved.
-          </p>
-          <p className="text-sm sm:text-base mt-3 text-gray-400">
-            Official Bangladesh Government Services Portal
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
