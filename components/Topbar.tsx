@@ -20,6 +20,17 @@ const Topbar = ({ lang }: { lang: string }) => {
   const otherLang = lang === 'en' ? 'bn' : 'en';
   const langText = lang === 'en' ? 'বাংলা' : 'English';
 
+  const getSwitchLanguageHref = (targetLang: "en" | "bn") => {
+    const segments = pathname.split("/").filter(Boolean);
+    if (segments.length === 0) return `/${targetLang}`;
+
+    const first = segments[0];
+    const rest = (first === "en" || first === "bn") ? segments.slice(1) : segments;
+    return `/${targetLang}${rest.length ? `/${rest.join("/")}` : ""}`;
+  };
+
+  const switchLangHref = getSwitchLanguageHref(otherLang);
+
   return (
     <nav className="bg-white shadow-md w-full">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,7 +70,7 @@ const Topbar = ({ lang }: { lang: string }) => {
               </Link>
             ))}
             <Link
-              href={`/${otherLang}`}
+              href={switchLangHref}
               className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm font-medium"
             >
               {langText}
@@ -69,7 +80,7 @@ const Topbar = ({ lang }: { lang: string }) => {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
             <Link
-              href={`/${otherLang}`}
+              href={switchLangHref}
               className="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700 transition-colors text-xs font-medium"
             >
               {langText}
