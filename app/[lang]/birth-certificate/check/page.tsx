@@ -4,9 +4,10 @@ import type { Metadata } from "next";
 const content = {
   en: {
     seo: {
-      title: "Check Digital Birth Certificate Bangladesh verification",
+      title:
+        "Digital Birth Certificate Check Bangladesh | Birth Registration Verification Online",
       description:
-        "Check Bangladesh digital birth certificate verification using birth registration number and date of birth. Official portal: everify.bdris.gov.bd",
+        "Verify Bangladesh digital birth certificate online using Birth Registration Number and Date of Birth through the official BDRIS portal. Learn how to check, download PDF, print, and correct birth certificate information.",
     },
     title: "Check Digital Birth Certificate (Bangladesh)",
     subtitle:
@@ -50,9 +51,9 @@ const content = {
   },
   bn: {
     seo: {
-      title: "Check Digital Birth Certificate Bangladesh verification",
+      title: "ডিজিটাল জন্ম নিবন্ধন যাচাই বাংলাদেশ | অনলাইনে জন্ম সনদ চেক",
       description:
-        "জন্ম নিবন্ধন নম্বর ও জন্ম তারিখ দিয়ে বাংলাদেশ ডিজিটাল জন্ম সনদ যাচাই করুন। অফিসিয়াল পোর্টাল: everify.bdris.gov.bd",
+        "জন্ম নিবন্ধন নম্বর ও জন্ম তারিখ দিয়ে অনলাইনে বাংলাদেশ ডিজিটাল জন্ম সনদ যাচাই করুন। জন্ম সনদ চেক, PDF ডাউনলোড, প্রিন্ট এবং তথ্য সংশোধনের নিয়ম জানুন।",
     },
     title: "ডিজিটাল জন্ম সনদ যাচাই (বাংলাদেশ)",
     subtitle:
@@ -151,6 +152,25 @@ export default async function BirthCertificateCheck({
 
   return (
     <div className="min-h-screen bg-linear-to-b from-blue-50 to-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "How can I check my digital birth certificate online in Bangladesh?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "You can verify your digital birth certificate using Birth Registration Number and Date of Birth through the official BDRIS verification portal.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {/* Content */}
       <section className="py-12 px-4">
         <div className="max-w-2xl mx-auto">
@@ -220,12 +240,7 @@ export default async function BirthCertificateCheck({
             </form>
 
             <div className="mt-6 flex items-center justify-between text-sm">
-              <Link
-                href={`/${currentLang}/birth-certificate`}
-                className="text-gray-600 hover:text-gray-800 underline"
-              >
-                {t.back}
-              </Link>
+              <p className="text-sm text-gray-500">Last updated: May 2026</p>
               <a
                 href={officialUrl}
                 target="_blank"
@@ -672,6 +687,201 @@ export default async function BirthCertificateCheck({
                   </p>
                 </div>
               ))}
+            </div>
+          </div>
+
+          <div className="mt-12">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+              {currentLang === "en"
+                ? "Frequently Asked Questions (FAQ)"
+                : "সচরাচর জিজ্ঞাসিত প্রশ্ন (FAQ)"}
+            </h2>
+
+            <div className="space-y-4">
+              {currentLang === "en" ? (
+                <>
+                  <div className="bg-white rounded-xl border border-gray-200 p-5">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      How can I check my digital birth certificate online in
+                      Bangladesh?
+                    </h3>
+                    <p className="text-gray-700 leading-7">
+                      You can verify a Bangladesh digital birth certificate
+                      online using your 17-digit Birth Registration Number and
+                      Date of Birth through the official Birth and Death
+                      Registration Information System (BDRIS) verification
+                      portal.
+                    </p>
+                  </div>
+
+                  <div className="bg-white rounded-xl border border-gray-200 p-5">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      What information is required for birth certificate
+                      verification?
+                    </h3>
+                    <p className="text-gray-700 leading-7">
+                      To verify a digital birth certificate, you usually need
+                      the 17-digit Birth Registration Number and the registered
+                      Date of Birth. The official portal may also require
+                      completing a simple bot verification challenge.
+                    </p>
+                  </div>
+
+                  <div className="bg-white rounded-xl border border-gray-200 p-5">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      Why is my birth certificate not showing online?
+                    </h3>
+                    <p className="text-gray-700 leading-7">
+                      Some older birth records in Bangladesh were originally
+                      maintained in paper format and may not yet be fully
+                      digitized. Incorrect Birth Registration Numbers, wrong
+                      dates of birth, or mismatched information can also prevent
+                      successful verification.
+                    </p>
+                  </div>
+
+                  <div className="bg-white rounded-xl border border-gray-200 p-5">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      How can I convert an old handwritten birth certificate
+                      into a digital birth certificate?
+                    </h3>
+                    <p className="text-gray-700 leading-7">
+                      You usually need to contact the Union Parishad,
+                      Municipality, or City Corporation office where the birth
+                      registration was originally completed. The local authority
+                      may request supporting documents before updating the
+                      information in the BDRIS database.
+                    </p>
+                  </div>
+
+                  <div className="bg-white rounded-xl border border-gray-200 p-5">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      How can I download or print my digital birth certificate?
+                    </h3>
+                    <p className="text-gray-700 leading-7">
+                      After successfully viewing the digital birth certificate
+                      online, you can press{" "}
+                      <span className="font-semibold">Ctrl + P</span> on a
+                      Windows computer or{" "}
+                      <span className="font-semibold">Command + P</span> on Mac
+                      devices to open the browser print option. From there, you
+                      can print the certificate or save it as a PDF file.
+                    </p>
+                  </div>
+
+                  <div className="bg-white rounded-xl border border-gray-200 p-5">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      Is a digital birth certificate required for passport
+                      application in Bangladesh?
+                    </h3>
+                    <p className="text-gray-700 leading-7">
+                      In many cases, a digital birth certificate is required for
+                      passport application, school admission, National ID
+                      related services, visa processing, and various other
+                      government or private services in Bangladesh.
+                    </p>
+                  </div>
+
+                  <div className="bg-white rounded-xl border border-gray-200 p-5">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      Can I correct mistakes in my birth certificate
+                      information?
+                    </h3>
+                    <p className="text-gray-700 leading-7">
+                      Yes. If there are spelling mistakes, incorrect dates, or
+                      other information mismatches, you may need to contact the
+                      local registrar office with supporting documents to
+                      request correction of the birth registration information.
+                    </p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="bg-white rounded-xl border border-gray-200 p-5">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      অনলাইনে জন্ম নিবন্ধন যাচাই কীভাবে করবো?
+                    </h3>
+                    <p className="text-gray-700 leading-7">
+                      ১৭ অংকের জন্ম নিবন্ধন নম্বর এবং জন্ম তারিখ ব্যবহার করে
+                      অফিসিয়াল Birth and Death Registration Information System
+                      (BDRIS) পোর্টালের মাধ্যমে অনলাইনে ডিজিটাল জন্ম সনদ যাচাই
+                      করা যায়।
+                    </p>
+                  </div>
+
+                  <div className="bg-white rounded-xl border border-gray-200 p-5">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      জন্ম সনদ যাচাই করতে কী কী তথ্য প্রয়োজন?
+                    </h3>
+                    <p className="text-gray-700 leading-7">
+                      সাধারণত জন্ম নিবন্ধন যাচাই করার জন্য ১৭ অংকের জন্ম নিবন্ধন
+                      নম্বর এবং জন্ম তারিখ প্রয়োজন হয়। অফিসিয়াল পোর্টালে
+                      অতিরিক্তভাবে একটি সহজ বট যাচাইও সম্পন্ন করতে হতে পারে।
+                    </p>
+                  </div>
+
+                  <div className="bg-white rounded-xl border border-gray-200 p-5">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      জন্ম সনদ অনলাইনে খুঁজে পাওয়া না গেলে কী করবেন?
+                    </h3>
+                    <p className="text-gray-700 leading-7">
+                      অনেক পুরোনো জন্ম নিবন্ধনের তথ্য এখনো সম্পূর্ণভাবে
+                      ডিজিটালাইজড নাও হতে পারে। এছাড়া ভুল জন্ম নিবন্ধন নম্বর,
+                      জন্ম তারিখের অমিল বা তথ্যের ভুলের কারণেও অনলাইন যাচাই
+                      ব্যর্থ হতে পারে।
+                    </p>
+                  </div>
+
+                  <div className="bg-white rounded-xl border border-gray-200 p-5">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      পুরোনো হাতে লেখা জন্ম সনদকে ডিজিটাল জন্ম সনদে রূপান্তর
+                      করবেন কীভাবে?
+                    </h3>
+                    <p className="text-gray-700 leading-7">
+                      সাধারণত যে ইউনিয়ন পরিষদ, পৌরসভা বা সিটি কর্পোরেশন অফিস
+                      থেকে জন্ম নিবন্ধন করা হয়েছিল সেখানে যোগাযোগ করতে হয়।
+                      প্রয়োজনীয় কাগজপত্র যাচাই করার পর তথ্য BDRIS ডাটাবেজে
+                      অন্তর্ভুক্ত করা হতে পারে।
+                    </p>
+                  </div>
+
+                  <div className="bg-white rounded-xl border border-gray-200 p-5">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      ডিজিটাল জন্ম সনদ PDF ডাউনলোড বা প্রিন্ট করবেন কীভাবে?
+                    </h3>
+                    <p className="text-gray-700 leading-7">
+                      জন্ম সনদ অনলাইনে দেখানোর পর কম্পিউটার বা ল্যাপটপ থেকে{" "}
+                      <span className="font-semibold">Ctrl + P</span> চাপলে
+                      ব্রাউজারের Print Window চালু হয়। সেখান থেকে সরাসরি প্রিন্ট
+                      করা যায় অথবা{" "}
+                      <span className="font-semibold">Save as PDF</span> অপশন
+                      ব্যবহার করে PDF ফাইল হিসেবে সংরক্ষণ করা যায়।
+                    </p>
+                  </div>
+
+                  <div className="bg-white rounded-xl border border-gray-200 p-5">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      পাসপোর্ট করার জন্য কি ডিজিটাল জন্ম সনদ প্রয়োজন?
+                    </h3>
+                    <p className="text-gray-700 leading-7">
+                      বাংলাদেশে পাসপোর্ট আবেদন, স্কুলে ভর্তি, জাতীয় পরিচয়পত্র
+                      সংক্রান্ত সেবা, ভিসা আবেদনসহ বিভিন্ন কাজে ডিজিটাল জন্ম সনদ
+                      প্রয়োজন হতে পারে।
+                    </p>
+                  </div>
+
+                  <div className="bg-white rounded-xl border border-gray-200 p-5">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      জন্ম নিবন্ধনের ভুল তথ্য সংশোধন করা যায় কি?
+                    </h3>
+                    <p className="text-gray-700 leading-7">
+                      হ্যাঁ। নামের বানান ভুল, জন্ম তারিখের ভুল বা অন্যান্য
+                      তথ্যগত সমস্যা থাকলে প্রয়োজনীয় ডকুমেন্টসহ স্থানীয় নিবন্ধন
+                      অফিসে যোগাযোগ করে তথ্য সংশোধনের আবেদন করা যায়।
+                    </p>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>
