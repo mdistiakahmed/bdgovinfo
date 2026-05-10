@@ -151,7 +151,7 @@ export default async function BirthCertificateCheck({
   const officialUrl = "https://everify.bdris.gov.bd/";
 
   return (
-    <div className="min-h-screen bg-linear-to-b from-blue-50 to-white">
+    <div className="min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
