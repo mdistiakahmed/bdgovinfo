@@ -425,6 +425,235 @@ export default async function BirthCertificateCheck({
             </div>
           </div>
 
+          <div className="mt-12">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              {currentLang === "en"
+                ? "How to Download or Print Digital Birth Certificate in Bangladesh"
+                : "বাংলাদেশে ডিজিটাল জন্ম সনদ ডাউনলোড বা প্রিন্ট করার উপায়"}
+            </h2>
+
+            <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4 text-gray-700 leading-8">
+              {currentLang === "en" ? (
+                <>
+                  <p>
+                    After successfully verifying your information on the
+                    official Birth and Death Registration Information System
+                    (BDRIS) portal, the digital copy of the birth certificate
+                    will appear on your browser screen. Many people want to
+                    download a PDF copy or print the certificate directly for
+                    school admission, passport application, National ID related
+                    work, visa processing, and other official purposes.
+                  </p>
+
+                  <p>
+                    If you are using a desktop computer or laptop, one of the
+                    easiest ways to save the digital birth certificate is by
+                    using the browser print option. Once the certificate becomes
+                    visible on the screen, press{" "}
+                    <span className="font-semibold">Ctrl + P</span> on your
+                    keyboard (Windows) or{" "}
+                    <span className="font-semibold">Command + P</span> on Mac
+                    devices. This will open the browser print window.
+                  </p>
+
+                  <p>
+                    Inside the print window, you can either print the birth
+                    certificate directly using a connected printer or choose the{" "}
+                    <span className="font-semibold">“Save as PDF”</span> option
+                    to download a digital PDF copy to your device. Saving as PDF
+                    is useful if you want to keep a backup copy or share the
+                    document online later.
+                  </p>
+
+                  <p>
+                    Before saving or printing, carefully review the information
+                    displayed on the certificate, including the name, date of
+                    birth, parents’ information, and Birth Registration Number.
+                    If you notice any mistake or mismatch, you should contact
+                    the local Union Parishad, Municipality, or City Corporation
+                    office for correction before using the certificate for
+                    official purposes.
+                  </p>
+
+                  <p>
+                    Many modern web browsers such as Google Chrome, Microsoft
+                    Edge, and Mozilla Firefox support PDF saving directly from
+                    the print menu. Using a laptop or desktop computer is
+                    generally more convenient than mobile devices when
+                    downloading or printing digital birth certificates in
+                    Bangladesh.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p>
+                    অফিসিয়াল Birth and Death Registration Information System
+                    (BDRIS) পোর্টালে তথ্য যাচাই সফল হলে ডিজিটাল জন্ম সনদের কপি
+                    ব্রাউজারে দেখা যায়। অনেকেই স্কুলে ভর্তি, পাসপোর্ট আবেদন,
+                    জাতীয় পরিচয়পত্র সংক্রান্ত কাজ, ভিসা প্রসেসিং বা অন্যান্য
+                    সরকারি কাজে ব্যবহারের জন্য জন্ম সনদের PDF কপি ডাউনলোড বা
+                    প্রিন্ট করতে চান।
+                  </p>
+
+                  <p>
+                    আপনি যদি কম্পিউটার বা ল্যাপটপ ব্যবহার করেন, তাহলে ব্রাউজারের
+                    Print অপশন ব্যবহার করে সহজেই ডিজিটাল জন্ম সনদ সংরক্ষণ করতে
+                    পারেন। জন্ম সনদ স্ক্রিনে দেখানোর পর কীবোর্ড থেকে{" "}
+                    <span className="font-semibold">Ctrl + P</span> চাপুন
+                    (Windows এর ক্ষেত্রে) অথবা{" "}
+                    <span className="font-semibold">Command + P</span> চাপুন
+                    (Mac এর ক্ষেত্রে)। এতে ব্রাউজারের Print Window চালু হবে।
+                  </p>
+
+                  <p>
+                    Print Window থেকে আপনি সরাসরি প্রিন্ট দিতে পারবেন অথবা{" "}
+                    <span className="font-semibold">“Save as PDF”</span> অপশন
+                    নির্বাচন করে PDF ফাইল হিসেবে ডাউনলোড করতে পারবেন। PDF আকারে
+                    সংরক্ষণ করলে ভবিষ্যতে প্রয়োজন হলে সহজে ব্যবহার বা অনলাইনে
+                    শেয়ার করা যায়।
+                  </p>
+
+                  <p>
+                    প্রিন্ট বা ডাউনলোড করার আগে জন্ম সনদে থাকা নাম, জন্ম তারিখ,
+                    বাবা-মায়ের তথ্য এবং জন্ম নিবন্ধন নম্বর ভালোভাবে মিলিয়ে
+                    দেখুন। কোনো ভুল বা তথ্যের অমিল থাকলে অফিসিয়াল কাজে ব্যবহারের
+                    আগে সংশ্লিষ্ট ইউনিয়ন পরিষদ, পৌরসভা বা সিটি কর্পোরেশন অফিসে
+                    যোগাযোগ করে সংশোধন করে নেওয়া উচিত।
+                  </p>
+
+                  <p>
+                    Google Chrome, Microsoft Edge এবং Mozilla Firefox এর মতো
+                    আধুনিক ব্রাউজারগুলোতে সরাসরি PDF হিসেবে সংরক্ষণ করার সুবিধা
+                    রয়েছে। বাংলাদেশে ডিজিটাল জন্ম সনদ ডাউনলোড বা প্রিন্ট করার
+                    ক্ষেত্রে মোবাইলের তুলনায় কম্পিউটার বা ল্যাপটপ ব্যবহার
+                    সাধারণত বেশি সুবিধাজনক।
+                  </p>
+                </>
+              )}
+            </div>
+          </div>
+
+          <div className="mt-12">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              {currentLang === "en"
+                ? "How to Convert an Old Birth Certificate to a Digital Birth Certificate in Bangladesh"
+                : "পুরোনো জন্ম সনদকে ডিজিটাল জন্ম সনদে রূপান্তর করার উপায়"}
+            </h2>
+
+            <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4 text-gray-700 leading-8">
+              {currentLang === "en" ? (
+                <>
+                  <p>
+                    Many older birth certificates in Bangladesh were originally
+                    issued in handwritten or paper-based formats before the
+                    nationwide digital birth registration system was introduced.
+                    As a result, some citizens still possess old birth
+                    certificates that cannot be verified online through the
+                    official Birth and Death Registration Information System
+                    (BDRIS) portal.
+                  </p>
+
+                  <p>
+                    To upgrade a non-digital or handwritten birth certificate
+                    into a digital birth certificate, you usually need to
+                    contact the local Union Parishad, Municipality, or City
+                    Corporation office where the original birth registration was
+                    completed. The local registrar office is responsible for
+                    transferring older paper records into the government’s
+                    digital database.
+                  </p>
+
+                  <p>
+                    During the application process, you may be asked to submit
+                    supporting documents such as the old birth certificate copy,
+                    National ID cards of parents, educational certificates,
+                    passport copy, vaccination card, or other identity-related
+                    documents. These documents help the local authority verify
+                    the authenticity of the birth information before
+                    digitization.
+                  </p>
+
+                  <p>
+                    In some cases, additional corrections may also be required
+                    if there are spelling mistakes, incorrect dates, missing
+                    parent information, or inconsistencies between different
+                    documents. After verification and approval, the updated
+                    information is entered into the BDRIS system and a new
+                    digital Birth Registration Number may be issued if
+                    necessary.
+                  </p>
+
+                  <p>
+                    Once the record is successfully digitized, the birth
+                    certificate can usually be verified online using the
+                    official government verification portal. Digital birth
+                    certificates are now widely required in Bangladesh for
+                    passport applications, school admission, National ID related
+                    services, bank account opening, visa applications, and many
+                    other public or private services.
+                  </p>
+
+                  <p>
+                    Because procedures may slightly vary between different local
+                    government offices, it is recommended to contact your
+                    respective Union Parishad, Municipality, or City Corporation
+                    office directly for the latest requirements and processing
+                    instructions regarding birth certificate digitization.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p>
+                    বাংলাদেশে অনেক পুরোনো জন্ম সনদ হাতে লেখা বা কাগজভিত্তিক
+                    পদ্ধতিতে তৈরি করা হয়েছিল, যখন ডিজিটাল জন্ম নিবন্ধন ব্যবস্থা
+                    চালু হয়নি। ফলে এখনো অনেক মানুষের কাছে এমন জন্ম সনদ রয়েছে যা
+                    অনলাইনে যাচাই করা যায় না এবং সরকারি ডিজিটাল ডাটাবেজে
+                    সংরক্ষিত নেই।
+                  </p>
+
+                  <p>
+                    পুরোনো বা নন-ডিজিটাল জন্ম সনদকে ডিজিটাল জন্ম সনদে রূপান্তর
+                    করতে সাধারণত যে ইউনিয়ন পরিষদ, পৌরসভা বা সিটি কর্পোরেশন অফিস
+                    থেকে মূল জন্ম নিবন্ধন করা হয়েছিল সেখানে যোগাযোগ করতে হয়।
+                    স্থানীয় নিবন্ধন অফিস পুরোনো কাগজভিত্তিক তথ্য সরকারি ডিজিটাল
+                    ডাটাবেজে অন্তর্ভুক্ত করার কাজ করে।
+                  </p>
+
+                  <p>
+                    আবেদন করার সময় পুরোনো জন্ম সনদের কপি, বাবা-মায়ের জাতীয়
+                    পরিচয়পত্র, শিক্ষাগত সনদ, পাসপোর্ট কপি, টিকা কার্ড বা
+                    অন্যান্য পরিচয় সংক্রান্ত ডকুমেন্ট জমা দিতে হতে পারে। এসব
+                    তথ্যের মাধ্যমে কর্তৃপক্ষ জন্ম নিবন্ধনের তথ্য যাচাই করে
+                    ডিজিটাল সিস্টেমে অন্তর্ভুক্ত করে।
+                  </p>
+
+                  <p>
+                    অনেক ক্ষেত্রে নামের বানান ভুল, জন্ম তারিখের অমিল, অসম্পূর্ণ
+                    তথ্য বা বিভিন্ন কাগজপত্রের তথ্যের অসামঞ্জস্য থাকলে সংশোধনের
+                    প্রয়োজন হতে পারে। যাচাই ও অনুমোদনের পর তথ্য BDRIS সিস্টেমে
+                    সংরক্ষণ করা হয় এবং প্রয়োজন হলে নতুন ডিজিটাল জন্ম নিবন্ধন
+                    নম্বর প্রদান করা হতে পারে।
+                  </p>
+
+                  <p>
+                    তথ্য সফলভাবে ডিজিটালাইজড হওয়ার পর অফিসিয়াল অনলাইন পোর্টালের
+                    মাধ্যমে জন্ম সনদ যাচাই করা যায়। বর্তমানে বাংলাদেশে পাসপোর্ট
+                    আবেদন, স্কুলে ভর্তি, জাতীয় পরিচয়পত্র সংক্রান্ত সেবা, ব্যাংক
+                    একাউন্ট খোলা, ভিসা আবেদনসহ বিভিন্ন সরকারি ও বেসরকারি কাজে
+                    ডিজিটাল জন্ম সনদ গুরুত্বপূর্ণ ভূমিকা পালন করে।
+                  </p>
+
+                  <p>
+                    বিভিন্ন ইউনিয়ন পরিষদ, পৌরসভা বা সিটি কর্পোরেশন অফিসে
+                    প্রক্রিয়ায় কিছু পার্থক্য থাকতে পারে। তাই জন্ম সনদ ডিজিটালাইজ
+                    করার সর্বশেষ নিয়ম ও প্রয়োজনীয় কাগজপত্র সম্পর্কে জানতে
+                    সংশ্লিষ্ট স্থানীয় অফিসে সরাসরি যোগাযোগ করা ভালো।
+                  </p>
+                </>
+              )}
+            </div>
+          </div>
+
           <div className="mt-10">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">
               {t.importance.title}
