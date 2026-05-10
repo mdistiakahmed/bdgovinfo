@@ -1,12 +1,9 @@
-'use client';
-
 import Link from 'next/link';
-import { useState } from 'react';
 
 const content = {
   en: {
     title: "Passport Application",
-    subtitle: "Fill in the form to apply for passport",
+    subtitle: "Fill in form to apply for passport",
     fields: {
       name: "Full Name",
       dob: "Date of Birth",
@@ -46,49 +43,19 @@ const content = {
   }
 };
 
-export default function PassportRegistration({ params }: { params: { lang: string } }) {
-  const currentLang = params.lang as 'en' | 'bn';
+export default async function PassportRegistration({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const currentLang = lang as 'en' | 'bn';
   const t = content[currentLang];
-  const [formData, setFormData] = useState({
-    name: '',
-    dob: '',
-    passportType: '',
-    purpose: '',
-    address: '',
-    phone: '',
-    email: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert('Form submitted! (This is a demo)');
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-red-50 to-white">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <Link href={`/${currentLang}/passport`} className="text-red-600 hover:text-red-700">
-              ← {t.back}
-            </Link>
-            <h1 className="text-xl sm:text-2xl font-bold text-red-700">
-              {t.title}
-            </h1>
-            <div className="w-20"></div>
-          </div>
-        </div>
-      </header>
+    <div className="bg-gradient-to-b from-red-50 to-white">
+      <div className="max-w-6xl mx-auto px-4 py-6">
+        <Link href={`/${currentLang}/passport`} className="text-red-600 hover:text-red-700 mb-6 inline-block">
+          ← {t.back}
+        </Link>
+      </div>
 
-      {/* Form */}
       <section className="py-12 px-4">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-8">
@@ -98,7 +65,7 @@ export default function PassportRegistration({ params }: { params: { lang: strin
           </div>
 
           <div className="bg-white rounded-xl shadow-lg p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   {t.fields.name}
@@ -106,8 +73,6 @@ export default function PassportRegistration({ params }: { params: { lang: strin
                 <input
                   type="text"
                   name="name"
-                  value={formData.name}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                   required
                 />
@@ -120,8 +85,6 @@ export default function PassportRegistration({ params }: { params: { lang: strin
                 <input
                   type="date"
                   name="dob"
-                  value={formData.dob}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                   required
                 />
@@ -133,8 +96,6 @@ export default function PassportRegistration({ params }: { params: { lang: strin
                 </label>
                 <select
                   name="passportType"
-                  value={formData.passportType}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                   required
                 >
@@ -152,8 +113,6 @@ export default function PassportRegistration({ params }: { params: { lang: strin
                 <input
                   type="text"
                   name="purpose"
-                  value={formData.purpose}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                   required
                 />
@@ -166,8 +125,6 @@ export default function PassportRegistration({ params }: { params: { lang: strin
                 <input
                   type="text"
                   name="address"
-                  value={formData.address}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                   required
                 />
@@ -180,8 +137,6 @@ export default function PassportRegistration({ params }: { params: { lang: strin
                 <input
                   type="tel"
                   name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                   required
                 />
@@ -194,8 +149,6 @@ export default function PassportRegistration({ params }: { params: { lang: strin
                 <input
                   type="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                 />
               </div>

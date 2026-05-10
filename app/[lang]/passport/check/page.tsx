@@ -1,7 +1,4 @@
-'use client';
-
 import Link from 'next/link';
-import { useState } from 'react';
 
 const content = {
   en: {
@@ -38,37 +35,19 @@ const content = {
   }
 };
 
-export default function PassportCheck({ params }: { params: { lang: string } }) {
-  const currentLang = params.lang as 'en' | 'bn';
+export default async function PassportCheck({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const currentLang = lang as 'en' | 'bn';
   const t = content[currentLang];
-  const [passportNumber, setPassportNumber] = useState('');
-  const [showResult, setShowResult] = useState(false);
-
-  const handleCheck = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (passportNumber) {
-      setShowResult(true);
-    }
-  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-red-50 to-white">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <Link href={`/${currentLang}/passport`} className="text-red-600 hover:text-red-700">
-              ← {t.back}
-            </Link>
-            <h1 className="text-xl sm:text-2xl font-bold text-red-700">
-              {t.title}
-            </h1>
-            <div className="w-20"></div>
-          </div>
-        </div>
-      </header>
+    <div className="bg-gradient-to-b from-red-50 to-white">
+      <div className="max-w-6xl mx-auto px-4 py-6">
+        <Link href={`/${currentLang}/passport`} className="text-red-600 hover:text-red-700 mb-6 inline-block">
+          ← {t.back}
+        </Link>
+      </div>
 
-      {/* Content */}
       <section className="py-12 px-4">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-8">
@@ -78,15 +57,13 @@ export default function PassportCheck({ params }: { params: { lang: string } }) 
           </div>
 
           <div className="bg-white rounded-xl shadow-lg p-8">
-            <form onSubmit={handleCheck} className="space-y-6">
+            <form className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   {t.passportNumber}
                 </label>
                 <input
                   type="text"
-                  value={passportNumber}
-                  onChange={(e) => setPassportNumber(e.target.value)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                   placeholder="Enter passport number"
                   required
@@ -101,27 +78,26 @@ export default function PassportCheck({ params }: { params: { lang: string } }) 
               </button>
             </form>
 
-            {showResult && (
-              <div className="mt-8 p-6 bg-orange-50 rounded-lg border border-orange-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  {t.result.title}
-                </h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">{t.result.name}:</span>
-                    <span className="font-medium">Ahmed Khan</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">{t.result.type}:</span>
-                    <span className="font-medium">Regular</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">{t.result.status}:</span>
-                    <span className="font-medium text-orange-600">{t.result.processing}</span>
-                  </div>
+            {/* Demo Result - Hidden by default */}
+            <div className="mt-8 p-6 bg-orange-50 rounded-lg border border-orange-200 hidden">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                {t.result.title}
+              </h3>
+              <div className="space-y-3">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">{t.result.name}:</span>
+                  <span className="font-medium">Ahmed Khan</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">{t.result.type}:</span>
+                  <span className="font-medium">Regular</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">{t.result.status}:</span>
+                  <span className="font-medium text-orange-600">{t.result.processing}</span>
                 </div>
               </div>
-            )}
+            </div>
           </div>
         </div>
       </section>

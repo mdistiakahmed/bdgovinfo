@@ -1,7 +1,4 @@
-'use client';
-
 import Link from 'next/link';
-import { useState } from 'react';
 
 const content = {
   en: {
@@ -34,48 +31,19 @@ const content = {
   }
 };
 
-export default function NIDRegistration({ params }: { params: { lang: string } }) {
-  const currentLang = params.lang as 'en' | 'bn';
+export default async function NIDRegistration({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const currentLang = lang as 'en' | 'bn';
   const t = content[currentLang];
-  const [formData, setFormData] = useState({
-    name: '',
-    dob: '',
-    nidNumber: '',
-    address: '',
-    phone: '',
-    email: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert('Form submitted! (This is a demo)');
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <Link href={`/${currentLang}/nid`} className="text-green-600 hover:text-green-700">
-              ← {t.back}
-            </Link>
-            <h1 className="text-xl sm:text-2xl font-bold text-green-700">
-              {t.title}
-            </h1>
-            <div className="w-20"></div>
-          </div>
-        </div>
-      </header>
+    <div className="bg-gradient-to-b from-green-50 to-white">
+      <div className="max-w-6xl mx-auto px-4 py-6">
+        <Link href={`/${currentLang}/nid`} className="text-green-600 hover:text-green-700 mb-6 inline-block">
+          ← {t.back}
+        </Link>
+      </div>
 
-      {/* Form */}
       <section className="py-12 px-4">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-8">
@@ -85,7 +53,7 @@ export default function NIDRegistration({ params }: { params: { lang: string } }
           </div>
 
           <div className="bg-white rounded-xl shadow-lg p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   {t.fields.name}
@@ -93,8 +61,6 @@ export default function NIDRegistration({ params }: { params: { lang: string } }
                 <input
                   type="text"
                   name="name"
-                  value={formData.name}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   required
                 />
@@ -107,8 +73,6 @@ export default function NIDRegistration({ params }: { params: { lang: string } }
                 <input
                   type="date"
                   name="dob"
-                  value={formData.dob}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   required
                 />
@@ -121,8 +85,6 @@ export default function NIDRegistration({ params }: { params: { lang: string } }
                 <input
                   type="text"
                   name="nidNumber"
-                  value={formData.nidNumber}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   required
                 />
@@ -135,8 +97,6 @@ export default function NIDRegistration({ params }: { params: { lang: string } }
                 <input
                   type="text"
                   name="address"
-                  value={formData.address}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   required
                 />
@@ -149,8 +109,6 @@ export default function NIDRegistration({ params }: { params: { lang: string } }
                 <input
                   type="tel"
                   name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   required
                 />
@@ -163,8 +121,6 @@ export default function NIDRegistration({ params }: { params: { lang: string } }
                 <input
                   type="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 />
               </div>

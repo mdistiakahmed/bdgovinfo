@@ -23,23 +23,13 @@ export default async function NIDPage({ params }: { params: Promise<{ lang: stri
   const t = content[currentLang];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <Link href={`/${currentLang}`} className="text-green-600 hover:text-green-700">
-              ← {t.back}
-            </Link>
-            <h1 className="text-xl sm:text-2xl font-bold text-green-700">
-              {t.title}
-            </h1>
-            <div className="w-20"></div>
-          </div>
-        </div>
-      </header>
+    <div className="bg-gradient-to-b from-green-50 to-white">
+      <div className="max-w-6xl mx-auto px-4 py-6">
+        <Link href={`/${currentLang}`} className="text-green-600 hover:text-green-700 mb-6 inline-block">
+          ← {t.back}
+        </Link>
+      </div>
 
-      {/* Content */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
