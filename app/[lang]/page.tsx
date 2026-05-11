@@ -78,13 +78,13 @@ export default async function HomePage({
               </div>
               <div className="space-y-4">
                 <Link
-                  href={`/${currentLang}/birth-certificate/registration`}
+                  href={`/${currentLang}/digital-birth-certificate-registration-bangladesh`}
                   className="block w-full text-center bg-blue-600 text-white py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium"
                 >
                   {t.actions.registration}
                 </Link>
                 <Link
-                  href={`/${currentLang}/birth-certificate/check`}
+                  href={`/${currentLang}/digital-birth-certificate-check-bangladesh`}
                   className="block w-full text-center border border-blue-600 text-blue-600 py-4 rounded-lg hover:bg-blue-50 transition-colors font-medium"
                 >
                   {t.actions.check}
@@ -116,13 +116,13 @@ export default async function HomePage({
               </div>
               <div className="space-y-4">
                 <Link
-                  href={`/${currentLang}/nid/registration`}
+                  href={`/${currentLang}/nid-registration-bangladesh`}
                   className="block w-full text-center bg-green-600 text-white py-4 rounded-lg hover:bg-green-700 transition-colors font-medium"
                 >
                   {t.actions.registration}
                 </Link>
                 <Link
-                  href={`/${currentLang}/nid/check`}
+                  href={`/${currentLang}/nid-check-bangladesh`}
                   className="block w-full text-center border border-green-600 text-green-600 py-4 rounded-lg hover:bg-green-50 transition-colors font-medium"
                 >
                   {t.actions.check}
@@ -154,13 +154,13 @@ export default async function HomePage({
               </div>
               <div className="space-y-4">
                 <Link
-                  href={`/${currentLang}/passport/registration`}
+                  href={`/${currentLang}/passport-registration-bangladesh`}
                   className="block w-full text-center bg-red-600 text-white py-4 rounded-lg hover:bg-red-700 transition-colors font-medium"
                 >
                   {t.actions.registration}
                 </Link>
                 <Link
-                  href={`/${currentLang}/passport/check`}
+                  href={`/${currentLang}/passport-check-bangladesh`}
                   className="block w-full text-center border border-red-600 text-red-600 py-4 rounded-lg hover:bg-red-50 transition-colors font-medium"
                 >
                   {t.actions.check}

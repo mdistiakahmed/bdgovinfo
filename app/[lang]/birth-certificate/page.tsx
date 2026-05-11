@@ -63,7 +63,7 @@ export default async function BirthCertificatePage({
                   Register for a new birth certificate
                 </p>
                 <Link
-                  href={`/${currentLang}/birth-certificate/registration`}
+                  href={`/${currentLang}/digital-birth-certificate-registration-bangladesh`}
                   className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   {t.registration}
@@ -96,7 +96,7 @@ export default async function BirthCertificatePage({
                   Check your birth certificate status
                 </p>
                 <Link
-                  href={`/${currentLang}/birth-certificate/check`}
+                  href={`/${currentLang}/digital-birth-certificate-check-bangladesh`}
                   className="inline-block bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors"
                 >
                   {t.check}

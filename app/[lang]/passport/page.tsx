@@ -54,7 +54,7 @@ export default async function PassportPage({ params }: { params: Promise<{ lang:
                   Apply for a new passport
                 </p>
                 <Link 
-                  href={`/${currentLang}/passport/registration`}
+                  href={`/${currentLang}/passport-registration-bangladesh`}
                   className="inline-block bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition-colors"
                 >
                   {t.registration}
@@ -77,7 +77,7 @@ export default async function PassportPage({ params }: { params: Promise<{ lang:
                   Check your passport status
                 </p>
                 <Link 
-                  href={`/${currentLang}/passport/check`}
+                  href={`/${currentLang}/passport-check-bangladesh`}
                   className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg hover:bg-orange-700 transition-colors"
                 >
                   {t.check}
