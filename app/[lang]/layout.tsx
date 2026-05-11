@@ -24,7 +24,7 @@ export default async function LanguageLayout({
       >
         <div className="absolute inset-0 bg-gray-50" />
         <div
-          className="absolute inset-0 bg-[url('/gov_seal.png')] bg-fixed bg-center bg-no-repeat opacity-[0.07]"
+          className="absolute inset-0 bg-[url('/gov_seal.png')] bg-center bg-no-repeat opacity-[0.07] bg-scroll md:bg-fixed"
           style={{ backgroundSize: "min(85vmin, 520px)" }}
         />
       </div>
