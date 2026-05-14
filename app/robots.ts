@@ -6,15 +6,23 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        userAgent: "*",
-        allow: "/",
-      },
-      {
         userAgent: "facebookexternalhit",
         allow: "/",
       },
       {
         userAgent: "Facebot",
+        allow: "/",
+      },
+      {
+        userAgent: "FacebookBot",
+        allow: "/",
+      },
+      {
+        userAgent: "meta-externalagent",
+        allow: "/",
+      },
+      {
+        userAgent: "*",
         allow: "/",
       },
     ],
