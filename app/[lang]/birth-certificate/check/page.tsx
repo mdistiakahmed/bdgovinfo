@@ -451,102 +451,253 @@ export default async function BirthCertificateCheck({
                 : "বাংলাদেশে ডিজিটাল জন্ম সনদ ডাউনলোড বা প্রিন্ট করার উপায়"}
             </h2>
 
-            <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4 text-gray-700 leading-8">
+            <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-10 text-gray-700 leading-8">
               {currentLang === "en" ? (
                 <>
-                  <p>
-                    After successfully verifying your information on the
-                    official Birth and Death Registration Information System
-                    (BDRIS) portal, the digital copy of the birth certificate
-                    will appear on your browser screen. Many people want to
-                    download a PDF copy or print the certificate directly for
-                    school admission, passport application, National ID related
-                    work, visa processing, and other official purposes.
-                  </p>
+                  <div>
+                    <p className="mb-4">
+                      Downloading or printing a Bangladesh digital birth
+                      certificate online is a simple process. You can easily
+                      verify and save your birth certificate from the official
+                      Birth and Death Registration Information System (BDRIS)
+                      portal using your Birth Registration Number and date of
+                      birth.
+                    </p>
 
-                  <p>
-                    If you are using a desktop computer or laptop, one of the
-                    easiest ways to save the digital birth certificate is by
-                    using the browser print option. Once the certificate becomes
-                    visible on the screen, press{" "}
-                    <span className="font-semibold">Ctrl + P</span> on your
-                    keyboard (Windows) or{" "}
-                    <span className="font-semibold">Command + P</span> on Mac
-                    devices. This will open the browser print window.
-                  </p>
+                    <p>
+                      Below are the 3 simple steps to check, download, and print
+                      your digital birth certificate in Bangladesh for school
+                      admission, passport application, visa processing, NID
+                      registration, and other official purposes.
+                    </p>
+                  </div>
 
-                  <p>
-                    Inside the print window, you can either print the birth
-                    certificate directly using a connected printer or choose the{" "}
-                    <span className="font-semibold">“Save as PDF”</span> option
-                    to download a digital PDF copy to your device. Saving as PDF
-                    is useful if you want to keep a backup copy or share the
-                    document online later.
-                  </p>
+                  {/* Step 1 */}
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                      Step 1: Enter Birth Registration Number and Date of Birth
+                    </h3>
 
-                  <p>
-                    Before saving or printing, carefully review the information
-                    displayed on the certificate, including the name, date of
-                    birth, parents’ information, and Birth Registration Number.
-                    If you notice any mistake or mismatch, you should contact
-                    the local Union Parishad, Municipality, or City Corporation
-                    office for correction before using the certificate for
-                    official purposes.
-                  </p>
+                    <img
+                      src="/birth_certificate_page1.png"
+                      alt="Bangladesh birth certificate verification form page"
+                      className="w-full rounded-xl border border-gray-200 mb-5"
+                    />
 
-                  <p>
-                    Many modern web browsers such as Google Chrome, Microsoft
-                    Edge, and Mozilla Firefox support PDF saving directly from
-                    the print menu. Using a laptop or desktop computer is
-                    generally more convenient than mobile devices when
-                    downloading or printing digital birth certificates in
-                    Bangladesh.
-                  </p>
+                    <p className="mb-4">
+                      First, visit the Bangladesh digital birth certificate
+                      verification page. You need to enter your{" "}
+                      <span className="font-semibold">
+                        Birth Registration Number
+                      </span>{" "}
+                      and <span className="font-semibold">Date of Birth</span>{" "}
+                      correctly.
+                    </p>
+
+                    <p className="mb-4">
+                      The portal also includes a simple captcha verification
+                      where you need to solve a small math problem, usually the
+                      sum of two numbers. After completing the captcha, click
+                      the verify or search button to continue.
+                    </p>
+
+                    <p>
+                      Make sure all information matches your official birth
+                      registration record to avoid verification errors.
+                    </p>
+                  </div>
+
+                  {/* Step 2 */}
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                      Step 2: View the Digital Birth Certificate
+                    </h3>
+
+                    <img
+                      src="/birth_certificate_page2.png"
+                      alt="Digital birth certificate displayed online in Bangladesh"
+                      className="w-full rounded-xl border border-gray-200 mb-5"
+                    />
+
+                    <p className="mb-4">
+                      If the birth registration number is valid and already
+                      registered in the Bangladesh government database, the
+                      digital birth certificate will appear on your screen.
+                    </p>
+
+                    <p className="mb-4">
+                      Carefully check all information including name, parents’
+                      information, date of birth, and Birth Registration Number
+                      before downloading or printing the certificate.
+                    </p>
+
+                    <p>
+                      If no record is found or the certificate is not registered
+                      yet, you should proceed to the online birth registration
+                      application page to apply for a new digital birth
+                      certificate in Bangladesh.
+                    </p>
+                  </div>
+
+                  {/* Step 3 */}
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                      Step 3: Press Ctrl + P and Save as PDF
+                    </h3>
+
+                    <img
+                      src="/birth_certificate_page3.png"
+                      alt="Save Bangladesh birth certificate as PDF using browser print option"
+                      className="w-full rounded-xl border border-gray-200 mb-5"
+                    />
+
+                    <p className="mb-4">
+                      Once the certificate becomes visible on your browser,
+                      press <span className="font-semibold">Ctrl + P</span> on
+                      Windows or{" "}
+                      <span className="font-semibold">Command + P</span> on Mac
+                      devices. This will open the browser print window.
+                    </p>
+
+                    <p className="mb-4">
+                      Inside the print window, choose{" "}
+                      <span className="font-semibold">“Save as PDF”</span> as
+                      the printer destination. Then click the{" "}
+                      <span className="font-semibold">Save</span> button to
+                      download the digital birth certificate PDF file to your
+                      device.
+                    </p>
+
+                    <p className="mb-4">
+                      You can also directly print the certificate using a
+                      connected printer if you need a hard copy for official
+                      use.
+                    </p>
+
+                    <p>
+                      Modern browsers like Google Chrome, Microsoft Edge, and
+                      Mozilla Firefox fully support PDF download and printing
+                      for Bangladesh digital birth certificates.
+                    </p>
+                  </div>
                 </>
               ) : (
                 <>
-                  <p>
-                    অফিসিয়াল Birth and Death Registration Information System
-                    (BDRIS) পোর্টালে তথ্য যাচাই সফল হলে ডিজিটাল জন্ম সনদের কপি
-                    ব্রাউজারে দেখা যায়। অনেকেই স্কুলে ভর্তি, পাসপোর্ট আবেদন,
-                    জাতীয় পরিচয়পত্র সংক্রান্ত কাজ, ভিসা প্রসেসিং বা অন্যান্য
-                    সরকারি কাজে ব্যবহারের জন্য জন্ম সনদের PDF কপি ডাউনলোড বা
-                    প্রিন্ট করতে চান।
-                  </p>
+                  <div>
+                    <p className="mb-4">
+                      বাংলাদেশে ডিজিটাল জন্ম সনদ অনলাইনে ডাউনলোড বা প্রিন্ট করা
+                      খুবই সহজ। Birth and Death Registration Information System
+                      (BDRIS) পোর্টাল ব্যবহার করে জন্ম নিবন্ধন নম্বর ও জন্ম
+                      তারিখ দিয়ে সহজেই ডিজিটাল জন্ম সনদ যাচাই ও সংরক্ষণ করা যায়।
+                    </p>
 
-                  <p>
-                    আপনি যদি কম্পিউটার বা ল্যাপটপ ব্যবহার করেন, তাহলে ব্রাউজারের
-                    Print অপশন ব্যবহার করে সহজেই ডিজিটাল জন্ম সনদ সংরক্ষণ করতে
-                    পারেন। জন্ম সনদ স্ক্রিনে দেখানোর পর কীবোর্ড থেকে{" "}
-                    <span className="font-semibold">Ctrl + P</span> চাপুন
-                    (Windows এর ক্ষেত্রে) অথবা{" "}
-                    <span className="font-semibold">Command + P</span> চাপুন
-                    (Mac এর ক্ষেত্রে)। এতে ব্রাউজারের Print Window চালু হবে।
-                  </p>
+                    <p>
+                      নিচে বাংলাদেশ ডিজিটাল জন্ম সনদ যাচাই, ডাউনলোড এবং প্রিন্ট
+                      করার ৩টি সহজ ধাপ দেখানো হলো। এটি স্কুল ভর্তি, পাসপোর্ট
+                      আবেদন, ভিসা প্রসেসিং, এনআইডি আবেদন এবং অন্যান্য সরকারি
+                      কাজে ব্যবহার করা যায়।
+                    </p>
+                  </div>
 
-                  <p>
-                    Print Window থেকে আপনি সরাসরি প্রিন্ট দিতে পারবেন অথবা{" "}
-                    <span className="font-semibold">“Save as PDF”</span> অপশন
-                    নির্বাচন করে PDF ফাইল হিসেবে ডাউনলোড করতে পারবেন। PDF আকারে
-                    সংরক্ষণ করলে ভবিষ্যতে প্রয়োজন হলে সহজে ব্যবহার বা অনলাইনে
-                    শেয়ার করা যায়।
-                  </p>
+                  {/* Step 1 */}
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                      ধাপ ১: জন্ম নিবন্ধন নম্বর ও জন্ম তারিখ প্রদান করুন
+                    </h3>
 
-                  <p>
-                    প্রিন্ট বা ডাউনলোড করার আগে জন্ম সনদে থাকা নাম, জন্ম তারিখ,
-                    বাবা-মায়ের তথ্য এবং জন্ম নিবন্ধন নম্বর ভালোভাবে মিলিয়ে
-                    দেখুন। কোনো ভুল বা তথ্যের অমিল থাকলে অফিসিয়াল কাজে ব্যবহারের
-                    আগে সংশ্লিষ্ট ইউনিয়ন পরিষদ, পৌরসভা বা সিটি কর্পোরেশন অফিসে
-                    যোগাযোগ করে সংশোধন করে নেওয়া উচিত।
-                  </p>
+                    <img
+                      src="/birth_certificate_page1.png"
+                      alt="বাংলাদেশ জন্ম নিবন্ধন যাচাই ফর্ম"
+                      className="w-full rounded-xl border border-gray-200 mb-5"
+                    />
 
-                  <p>
-                    Google Chrome, Microsoft Edge এবং Mozilla Firefox এর মতো
-                    আধুনিক ব্রাউজারগুলোতে সরাসরি PDF হিসেবে সংরক্ষণ করার সুবিধা
-                    রয়েছে। বাংলাদেশে ডিজিটাল জন্ম সনদ ডাউনলোড বা প্রিন্ট করার
-                    ক্ষেত্রে মোবাইলের তুলনায় কম্পিউটার বা ল্যাপটপ ব্যবহার
-                    সাধারণত বেশি সুবিধাজনক।
-                  </p>
+                    <p className="mb-4">
+                      প্রথমে জন্ম নিবন্ধন যাচাই পেজে গিয়ে আপনার{" "}
+                      <span className="font-semibold">জন্ম নিবন্ধন নম্বর</span>{" "}
+                      এবং <span className="font-semibold">জন্ম তারিখ</span>{" "}
+                      সঠিকভাবে লিখুন।
+                    </p>
+
+                    <p className="mb-4">
+                      এরপর একটি সহজ ক্যাপচা যাচাই করতে হবে যেখানে সাধারণত দুইটি
+                      সংখ্যার যোগফল দিতে হয়। ক্যাপচা পূরণ করার পর Verify বা
+                      Search বাটনে ক্লিক করুন।
+                    </p>
+
+                    <p>
+                      ভুল এড়ানোর জন্য তথ্যগুলো অফিসিয়াল জন্ম নিবন্ধন তথ্য
+                      অনুযায়ী সঠিকভাবে প্রদান করুন।
+                    </p>
+                  </div>
+
+                  {/* Step 2 */}
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                      ধাপ ২: ডিজিটাল জন্ম সনদ দেখুন
+                    </h3>
+
+                    <img
+                      src="/birth_certificate_page2.png"
+                      alt="বাংলাদেশ ডিজিটাল জন্ম সনদ প্রদর্শন"
+                      className="w-full rounded-xl border border-gray-200 mb-5"
+                    />
+
+                    <p className="mb-4">
+                      জন্ম নিবন্ধন নম্বরটি যদি সরকারি ডাটাবেজে নিবন্ধিত থাকে,
+                      তাহলে ডিজিটাল জন্ম সনদ স্ক্রিনে প্রদর্শিত হবে।
+                    </p>
+
+                    <p className="mb-4">
+                      ডাউনলোড বা প্রিন্ট করার আগে নাম, জন্ম তারিখ, বাবা-মায়ের
+                      তথ্য এবং জন্ম নিবন্ধন নম্বর ভালোভাবে মিলিয়ে দেখুন।
+                    </p>
+
+                    <p>
+                      যদি কোনো তথ্য না পাওয়া যায় অথবা জন্ম নিবন্ধন এখনও না করা
+                      থাকে, তাহলে নতুন জন্ম নিবন্ধন আবেদন পেজে গিয়ে অনলাইনে
+                      আবেদন করতে হবে।
+                    </p>
+                  </div>
+
+                  {/* Step 3 */}
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                      ধাপ ৩: Ctrl + P চাপুন এবং PDF হিসেবে Save করুন
+                    </h3>
+
+                    <img
+                      src="/birth_certificate_page3.png"
+                      alt="বাংলাদেশ জন্ম সনদ PDF হিসেবে সংরক্ষণ"
+                      className="w-full rounded-xl border border-gray-200 mb-5"
+                    />
+
+                    <p className="mb-4">
+                      জন্ম সনদ স্ক্রিনে দেখানোর পর কীবোর্ড থেকে{" "}
+                      <span className="font-semibold">Ctrl + P</span> চাপুন
+                      (Windows এর ক্ষেত্রে) অথবা{" "}
+                      <span className="font-semibold">Command + P</span> চাপুন
+                      (Mac এর ক্ষেত্রে)। এতে ব্রাউজারের Print Window চালু হবে।
+                    </p>
+
+                    <p className="mb-4">
+                      Print Window থেকে{" "}
+                      <span className="font-semibold">“Save as PDF”</span> অপশন
+                      নির্বাচন করুন এবং{" "}
+                      <span className="font-semibold">Save</span> বাটনে ক্লিক
+                      করে PDF ফাইলটি ডাউনলোড করুন।
+                    </p>
+
+                    <p className="mb-4">
+                      চাইলে সরাসরি প্রিন্টার ব্যবহার করে হার্ড কপিও প্রিন্ট করা
+                      যাবে।
+                    </p>
+
+                    <p>
+                      Google Chrome, Microsoft Edge এবং Mozilla Firefox এর মতো
+                      আধুনিক ব্রাউজারগুলো বাংলাদেশ ডিজিটাল জন্ম সনদ PDF ডাউনলোড
+                      ও প্রিন্ট সম্পূর্ণভাবে সাপোর্ট করে।
+                    </p>
+                  </div>
                 </>
               )}
             </div>
