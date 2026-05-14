@@ -43,6 +43,13 @@ const content = {
   },
 };
 
+export function generateStaticParams() {
+  return [{ lang: "en" }, { lang: "bn" }];
+}
+
+/** Only `/en` and `/bn` exist as static HTML for this segment. */
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: {
@@ -77,7 +84,6 @@ export default async function HomePage({
 
   return (
     <div>
-      {/* Hero Section */}
       {/* Hero Section */}
       <section className="py-16 px-4">
         <div className="max-w-5xl mx-auto text-center">

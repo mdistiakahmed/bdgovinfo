@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { isServiceSlug, type ServiceSlug } from "@/lib/service-slugs";
+
 import BirthCertificateCheck, {
   generateMetadata as birthCertificateCheckGenerateMetadata,
-} from "../birth-certificate/check/page";
-import BirthCertificateRegistration from "../birth-certificate/registration/page";
+} from "@/components/birth-certificate/check/page";
+import BirthCertificateRegistration from "@/components/birth-certificate/registration/page";
 
-import NIDCheck from "../nid/check/page";
-import NIDRegistration from "../nid/registration/page";
+import NIDCheck from "@/components/nid/check/page";
+import NIDRegistration from "@/components/nid/registration/page";
 
-import PassportCheck from "../passport/check/page";
-import PassportRegistration from "../passport/registration/page";
+import PassportCheck from "@/components/passport/check/page";
+import PassportRegistration from "@/components/passport/registration/page";
 
 type Lang = "en" | "bn";
 
@@ -30,7 +32,7 @@ type SlugDefinition = {
   generateMetadata?: (ctx: SlugRouteContext) => Promise<Metadata> | Metadata;
 };
 
-const SLUGS: Record<string, SlugDefinition> = {
+const SLUGS: Record<ServiceSlug, SlugDefinition> = {
   "digital-birth-certificate-check-bangladesh": {
     render: ({ lang }) => (
       <BirthCertificateCheck params={Promise.resolve({ lang })} />
@@ -226,11 +228,22 @@ type PageProps = {
   params: Promise<{ lang: string; slug: string }>;
 };
 
+/** Only pre-built paths exist as static HTML; unknown slugs are not generated. */
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  const langs: Lang[] = ["en", "bn"];
+  const slugs = Object.keys(SLUGS) as ServiceSlug[];
+  return langs.flatMap((lang) => slugs.map((slug) => ({ lang, slug })));
+}
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { lang, slug } = await params;
   const currentLang = normalizeLang(lang);
+
+  if (!isServiceSlug(slug)) notFound();
 
   const def = SLUGS[slug];
   if (!def?.generateMetadata) notFound();
@@ -241,6 +254,8 @@ export async function generateMetadata({
 export default async function SlugPage({ params }: PageProps) {
   const { lang, slug } = await params;
   const currentLang = normalizeLang(lang);
+
+  if (!isServiceSlug(slug)) notFound();
 
   const def = SLUGS[slug];
   if (!def) notFound();
