@@ -1,13 +1,9 @@
-import type { NextConfig } from "next";
-
-/** Full static HTML/CSS/JS in `out/` for hosts like Cloudflare Pages (no Node server). */
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: "export",
-  // Ensures /about becomes /about/index.html, which is more crawler-friendly
-  trailingSlash: true,
   images: {
-    unoptimized: true,
+    unoptimized: true, // required for static export
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
