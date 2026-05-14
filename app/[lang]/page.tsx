@@ -86,7 +86,6 @@ export default async function HomePage({
     <div>
       {/* Hero Section */}
       <section className="py-16 px-4">
-        <p>Hello Istiak</p>
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             {t.title}
