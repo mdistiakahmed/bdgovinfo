@@ -58,6 +58,10 @@ const content = {
   },
 };
 
+export function generateStaticParams() {
+  return [{ lang: "en" }, { lang: "bn" }];
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -67,17 +71,17 @@ export async function generateMetadata({
   const currentLang = (lang === "bn" ? "bn" : "en") as "en" | "bn";
   const t = content[currentLang];
   const baseUrl = "https://bdgovinfo.com";
-  const path = `/${currentLang}/birth-certificate/check`;
+  const path = `/${currentLang}/digital-birth-certificate-check-bangladesh`;
   const canonical = `${baseUrl}${path}`;
-  const ogImage = "/globe.svg";
+  const ogImage = "/birth_certificate.png";
   return {
     title: t.seo.title,
     description: t.seo.description,
     alternates: {
       canonical,
       languages: {
-        en: `${baseUrl}/en/birth-certificate/check`,
-        bn: `${baseUrl}/bn/birth-certificate/check`,
+        en: `${baseUrl}/en/digital-birth-certificate-check-bangladesh`,
+        bn: `${baseUrl}/bn/digital-birth-certificate-check-bangladesh`,
       },
     },
     openGraph: {
