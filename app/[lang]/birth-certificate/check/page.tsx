@@ -12,9 +12,10 @@ const content = {
       description:
         "Verify Bangladesh digital birth certificate online using Birth Registration Number and Date of Birth through the official BDRIS portal. Learn how to check, download PDF, print, and correct birth certificate information.",
     },
-    title: "Check Digital Birth Certificate (Bangladesh)",
+    title:
+      "Bangladesh Digital Birth Certificate Check & Online Birth Registration Verification",
     subtitle:
-      "To verify a digital birth certificate, you need your Birth Registration Number and Date of Birth.",
+      "Verify Bangladesh digital birth certificate online using Birth Registration Number and Date of Birth through the official BDRIS verification system. Learn how to check birth certificate information, download PDF copies, print digital birth certificates, and fix birth registration problems.",
     fields: {
       brn: "Birth Registration Number (17 digits)",
       dob: "Date of Birth",
@@ -28,27 +29,6 @@ const content = {
       outcome:
         "If your record is digitized and the information matches, a digital birth certificate will be displayed.",
     },
-    importance: {
-      title: "Why a digital birth certificate matters in Bangladesh",
-      blocks: [
-        {
-          title: "Faster verification and reduced hassle",
-          text: "A digital birth certificate helps you verify registration details quickly, without repeated visits or manual checks.",
-        },
-        {
-          title: "Useful for education and services",
-          text: "Birth registration is commonly needed for school admission, exam registration, and many public services.",
-        },
-        {
-          title: "Helps avoid mistakes and fraud",
-          text: "Digital verification helps confirm that the Birth Registration Number and Date of Birth match official records, reducing errors and misuse.",
-        },
-        {
-          title: "Improves record keeping",
-          text: "Digitization supports better preservation of records and makes it easier to retrieve information when needed.",
-        },
-      ],
-    },
     check: "Check",
     back: "Back to Services",
   },
@@ -58,9 +38,9 @@ const content = {
       description:
         "জন্ম নিবন্ধন নম্বর ও জন্ম তারিখ দিয়ে অনলাইনে বাংলাদেশ ডিজিটাল জন্ম সনদ যাচাই করুন। জন্ম সনদ চেক, PDF ডাউনলোড, প্রিন্ট এবং তথ্য সংশোধনের নিয়ম জানুন।",
     },
-    title: "ডিজিটাল জন্ম সনদ যাচাই (বাংলাদেশ)",
+    title: "বাংলাদেশ ডিজিটাল জন্ম নিবন্ধন যাচাই ও অনলাইন জন্ম সনদ চেক",
     subtitle:
-      "ডিজিটাল জন্ম সনদ যাচাই করতে দুটি তথ্য প্রয়োজন: জন্ম নিবন্ধন নম্বর এবং জন্ম তারিখ।",
+      "জন্ম নিবন্ধন নম্বর এবং জন্ম তারিখ ব্যবহার করে অফিসিয়াল BDRIS সিস্টেমের মাধ্যমে বাংলাদেশ ডিজিটাল জন্ম সনদ অনলাইনে যাচাই করুন। জন্ম সনদ চেক, PDF ডাউনলোড, প্রিন্ট এবং জন্ম নিবন্ধন সমস্যার সমাধান সম্পর্কিত তথ্য জানুন।",
     fields: {
       brn: "জন্ম নিবন্ধন নম্বর (১৭ অংক)",
       dob: "জন্ম তারিখ",
@@ -73,27 +53,6 @@ const content = {
         "আপনার তথ্য সরাসরি অফিসিয়াল পোর্টালে নতুন ট্যাবে পাঠানো হয়; সেখানে ক্যাপচা বা অন্য যাচাই থাকলে সম্পন্ন করুন।",
       outcome:
         "আপনার তথ্য ডিজিটালাইজড থাকলে এবং তথ্য মিললে ডিজিটাল জন্ম সনদ দেখাবে।",
-    },
-    importance: {
-      title: "বাংলাদেশে ডিজিটাল জন্ম সনদের গুরুত্ব",
-      blocks: [
-        {
-          title: "দ্রুত যাচাই ও কম ভোগান্তি",
-          text: "ডিজিটাল জন্ম সনদ/যাচাই ব্যবস্থায় নিবন্ধনের তথ্য দ্রুত যাচাই করা যায়—বারবার অফিসে গিয়ে যাচাই করার প্রয়োজন কমে।",
-        },
-        {
-          title: "শিক্ষা ও বিভিন্ন সেবায় প্রয়োজন",
-          text: "স্কুলে ভর্তি, পরীক্ষার নিবন্ধন এবং বিভিন্ন সরকারি/বেসরকারি সেবায় জন্ম নিবন্ধনের তথ্য প্রায়ই প্রয়োজন হয়।",
-        },
-        {
-          title: "ভুল ও জালিয়াতি কমাতে সহায়তা করে",
-          text: "অফিসিয়াল রেকর্ডের সাথে জন্ম নিবন্ধন নম্বর ও জন্ম তারিখ মিলিয়ে দেখা যায়—ভুল তথ্য বা অপব্যবহার কমে।",
-        },
-        {
-          title: "রেকর্ড সংরক্ষণ উন্নত করে",
-          text: "ডিজিটালাইজেশন রেকর্ড সংরক্ষণ ও প্রয়োজনের সময় তথ্য খুঁজে পেতে আরও সহজ করে।",
-        },
-      ],
     },
     check: "সার্চ করুন",
   },
@@ -181,24 +140,109 @@ export default async function BirthCertificateCheck({
               {t.title}
             </h1>
             <p className="text-lg text-gray-700">{t.subtitle}</p>
-            <div className="mt-4 text-sm text-gray-600 space-y-1">
-              <p>
-                <span className="font-medium">{t.notes.officialPortal}:</span>{" "}
-                <a
-                  href={officialUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-blue-700 hover:text-blue-800 underline"
-                >
-                  everify.bdris.gov.bd
-                </a>
-              </p>
-              <p>{t.notes.botChallenge}</p>
-              <p>{t.notes.outcome}</p>
-            </div>
+            <p className="mt-4 text-base text-gray-600 leading-7 max-w-3xl mx-auto">
+              {currentLang === "en"
+                ? "This page provides step-by-step guidance for Bangladesh birth certificate verification, digital birth registration search, online PDF download, and old handwritten birth certificate digitization."
+                : "এই পেজে বাংলাদেশ জন্ম নিবন্ধন যাচাই, ডিজিটাল জন্ম সনদ অনুসন্ধান, PDF ডাউনলোড এবং পুরোনো হাতে লেখা জন্ম সনদ ডিজিটালাইজ করার ধাপসমূহ বিস্তারিতভাবে দেখানো হয়েছে।"}
+            </p>
           </div>
 
-          <div className="bg-white rounded-xl shadow-lg p-8">
+          {/* Table of Contents */}
+          <div className="mb-8 bg-blue-50 border border-blue-200 rounded-xl p-6">
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+              {currentLang === "en" ? "Table of Contents" : "সূচিপত্র"}
+            </h2>
+
+            <ul className="space-y-3 text-blue-700">
+              <li>
+                <a
+                  href="#birth-certificate-check-form"
+                  className="hover:underline"
+                >
+                  {currentLang === "en"
+                    ? "Birth Certificate Verification Form"
+                    : "জন্ম নিবন্ধন যাচাই ফর্ম"}
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#birth-certificate-download"
+                  className="hover:underline"
+                >
+                  {currentLang === "en"
+                    ? "How to Download or Print Birth Certificate"
+                    : "জন্ম সনদ ডাউনলোড বা প্রিন্ট করার উপায়"}
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#birth-certificate-not-found"
+                  className="hover:underline"
+                >
+                  {currentLang === "en"
+                    ? "What to Do if Birth Certificate is Not Found"
+                    : "জন্ম সনদ খুঁজে না পেলে কী করবেন"}
+                </a>
+              </li>
+
+              <li>
+                <a href="#digital-birth-system" className="hover:underline">
+                  {currentLang === "en"
+                    ? "Digital Birth Certificate System in Bangladesh"
+                    : "বাংলাদেশে ডিজিটাল জন্ম নিবন্ধন ব্যবস্থা"}
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#birth-certificate-digitization"
+                  className="hover:underline"
+                >
+                  {currentLang === "en"
+                    ? "Convert Old Birth Certificate to Digital"
+                    : "পুরোনো জন্ম সনদকে ডিজিটাল করার উপায়"}
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#birth-certificate-importance"
+                  className="hover:underline"
+                >
+                  {currentLang === "en"
+                    ? "Importance of Digital Birth Certificate in Bangladesh"
+                    : "বাংলাদেশে ডিজিটাল জন্ম সনদের গুরুত্ব"}
+                </a>
+              </li>
+
+              <li>
+                <a href="#birth-certificate-faq" className="hover:underline">
+                  FAQ
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Verification Form */}
+          <div
+            id="birth-certificate-check-form"
+            className="bg-white rounded-xl shadow-lg p-8"
+          >
+            <div className="mb-6">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+                {currentLang === "en"
+                  ? "Online Digital Birth Certificate Verification Form"
+                  : "অনলাইন ডিজিটাল জন্ম নিবন্ধন যাচাই ফর্ম"}
+              </h2>
+
+              <p className="text-gray-700 leading-7">
+                {currentLang === "en"
+                  ? "Enter your 17-digit Birth Registration Number and Date of Birth to verify your Bangladesh digital birth certificate online through the official BDRIS verification system."
+                  : "বাংলাদেশ ডিজিটাল জন্ম সনদ অনলাইনে যাচাই করার জন্য আপনার ১৭ অংকের জন্ম নিবন্ধন নম্বর এবং জন্ম তারিখ প্রদান করুন।"}
+              </p>
+            </div>
             <form
               className="space-y-6"
               action={BDRIS_UBRN_SEARCH}
@@ -253,198 +297,34 @@ export default async function BirthCertificateCheck({
 
             <div className="mt-6 flex items-center justify-between text-sm">
               <p className="text-sm text-gray-500">Last updated: May 2026</p>
+              <p>
+                <a
+                  href={officialUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-700 hover:text-blue-800 underline"
+                >
+                  everify.bdris.gov.bd
+                </a>
+              </p>
             </div>
           </div>
 
-          <div className="mt-10">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              {currentLang === "en"
-                ? "Digital Birth Certificate System in Bangladesh"
-                : "বাংলাদেশে ডিজিটাল জন্ম নিবন্ধন ব্যবস্থা"}
+          {/* Disclaimer */}
+          <div className="mt-6 bg-yellow-50 border border-yellow-300 rounded-xl p-5">
+            <h2 className="text-lg font-semibold text-gray-900 mb-2">
+              {currentLang === "en" ? "Disclaimer" : "দাবিত্যাগ"}
             </h2>
 
-            <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4 text-gray-700 leading-8">
-              {currentLang === "en" ? (
-                <>
-                  <p>
-                    In Bangladesh, birth registration was traditionally
-                    maintained in paper records at local Union Parishad,
-                    Municipality, or City Corporation offices. For many years,
-                    people had to visit the chairman’s office or local
-                    government office physically to verify birth information or
-                    collect certified copies. Paper-based records were often
-                    difficult to preserve, vulnerable to damage, and
-                    time-consuming to search manually.
-                  </p>
-
-                  <p>
-                    To modernize public services, the Government of Bangladesh
-                    introduced a digital birth registration system under the
-                    Birth and Death Registration Information System (BDRIS).
-                    Today, millions of birth records are stored digitally in the
-                    government database, making verification faster, easier, and
-                    more secure. Citizens can now verify a digital birth
-                    certificate online using the Birth Registration Number and
-                    Date of Birth through the official verification portal.
-                  </p>
-
-                  <p>
-                    A digital birth certificate is now an essential document for
-                    many important services in Bangladesh. It is commonly
-                    required for school admission, passport application,
-                    National ID related processes, mobile SIM registration, bank
-                    account opening, and various government or private services.
-                    In many cases, parents are also required to have their own
-                    digital birth certificates registered before applying for a
-                    birth certificate for their child.
-                  </p>
-
-                  <p>
-                    The digitization process has significantly improved record
-                    management and reduced the risk of errors or duplicate
-                    information. Online verification also helps confirm whether
-                    the provided Birth Registration Number and Date of Birth
-                    match official government records, helping reduce fraud and
-                    misinformation.
-                  </p>
-                </>
-              ) : (
-                <>
-                  <p>
-                    বাংলাদেশে আগে জন্ম নিবন্ধনের তথ্য মূলত কাগজপত্রের মাধ্যমে
-                    সংরক্ষণ করা হতো। ইউনিয়ন পরিষদ চেয়ারম্যান অফিস, পৌরসভা বা
-                    সিটি কর্পোরেশন অফিসে হাতে লেখা রেজিস্টারে জন্ম নিবন্ধনের
-                    তথ্য রাখা হতো। কোনো তথ্য যাচাই বা জন্ম সনদের কপি সংগ্রহ করতে
-                    হলে অনেক সময় সরাসরি স্থানীয় অফিসে যেতে হতো। কাগজভিত্তিক এই
-                    পদ্ধতিতে তথ্য সংরক্ষণ কঠিন ছিল এবং পুরোনো রেকর্ড খুঁজে বের
-                    করতেও সময় লাগতো।
-                  </p>
-
-                  <p>
-                    পরবর্তীতে বাংলাদেশ সরকার Birth and Death Registration
-                    Information System (BDRIS) এর মাধ্যমে জন্ম নিবন্ধন
-                    প্রক্রিয়াকে ডিজিটালাইজ করে। বর্তমানে দেশের অসংখ্য জন্ম
-                    নিবন্ধনের তথ্য সরকারি ডাটাবেজে সংরক্ষিত রয়েছে। এখন জন্ম
-                    নিবন্ধন নম্বর এবং জন্ম তারিখ ব্যবহার করে অনলাইনে ডিজিটাল
-                    জন্ম সনদ যাচাই করা যায়, যা যাচাই প্রক্রিয়াকে দ্রুত, সহজ এবং
-                    নিরাপদ করেছে।
-                  </p>
-
-                  <p>
-                    বর্তমানে ডিজিটাল জন্ম সনদ বাংলাদেশে অত্যন্ত গুরুত্বপূর্ণ
-                    একটি ডকুমেন্ট। স্কুলে ভর্তি, পাসপোর্ট আবেদন, জাতীয় পরিচয়পত্র
-                    সম্পর্কিত কার্যক্রম, মোবাইল সিম নিবন্ধন, ব্যাংক একাউন্ট খোলা
-                    এবং বিভিন্ন সরকারি ও বেসরকারি সেবার জন্য এটি প্রয়োজন হয়।
-                    অনেক ক্ষেত্রে শিশুর জন্ম সনদ করার সময় বাবা-মায়ের ডিজিটাল
-                    জন্ম নিবন্ধন তথ্যও প্রয়োজন হয়।
-                  </p>
-
-                  <p>
-                    জন্ম নিবন্ধনের ডিজিটালাইজেশন তথ্য সংরক্ষণ ব্যবস্থাকে আরও
-                    উন্নত করেছে এবং ভুল তথ্য বা ডুপ্লিকেট রেকর্ডের ঝুঁকি
-                    কমিয়েছে। অনলাইন যাচাইয়ের মাধ্যমে জন্ম নিবন্ধন নম্বর ও জন্ম
-                    তারিখ সরকারি রেকর্ডের সাথে মিলিয়ে দেখা যায়, যা জালিয়াতি ও
-                    ভুল তথ্য প্রতিরোধে সহায়তা করে।
-                  </p>
-                </>
-              )}
-            </div>
-          </div>
-
-          <div className="mt-12">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+            <p className="text-gray-700 leading-7 text-sm sm:text-base">
               {currentLang === "en"
-                ? "What to do if the digital birth certificate is not found"
-                : "ডিজিটাল জন্ম সনদ খুঁজে না পেলে কী করবেন"}
-            </h2>
-
-            <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4 text-gray-700 leading-8">
-              {currentLang === "en" ? (
-                <>
-                  <p>
-                    Sometimes the digital birth certificate may not appear even
-                    after entering the correct Birth Registration Number and
-                    Date of Birth. This can happen for several reasons,
-                    especially for older birth records that were originally
-                    maintained in paper format and later transferred into the
-                    digital database.
-                  </p>
-
-                  <p>
-                    First, carefully check whether the 17-digit Birth
-                    Registration Number and Date of Birth were entered
-                    correctly. Even a small typing mistake or incorrect date
-                    format can prevent the system from finding the record.
-                  </p>
-
-                  <p>
-                    If the information is correct but no result is shown, it may
-                    mean the birth record has not yet been fully digitized or
-                    updated in the government database. In such cases, you may
-                    need to contact the local Union Parishad, Municipality, or
-                    City Corporation office where the birth registration was
-                    originally completed.
-                  </p>
-
-                  <p>
-                    You may be asked to provide supporting documents such as
-                    previous birth certificate copies, National ID cards of
-                    parents, school certificates, or other identity documents to
-                    verify the information. After verification, the local
-                    authority may update or correct the digital record in the
-                    system.
-                  </p>
-
-                  <p>
-                    In some cases, information mismatches such as spelling
-                    differences, incorrect dates, or incomplete records can also
-                    prevent successful verification. Once the correction process
-                    is completed, the updated digital birth certificate should
-                    become available online.
-                  </p>
-                </>
-              ) : (
-                <>
-                  <p>
-                    অনেক সময় সঠিক জন্ম নিবন্ধন নম্বর এবং জন্ম তারিখ দেওয়ার পরেও
-                    ডিজিটাল জন্ম সনদ দেখা নাও যেতে পারে। বিশেষ করে পুরোনো জন্ম
-                    নিবন্ধনের ক্ষেত্রে এমন হতে পারে, কারণ আগে অনেক তথ্য
-                    কাগজপত্রে সংরক্ষিত ছিল এবং পরে সেগুলো ডিজিটাল ডাটাবেজে
-                    স্থানান্তর করা হয়েছে।
-                  </p>
-
-                  <p>
-                    প্রথমে নিশ্চিত করুন যে ১৭ অংকের জন্ম নিবন্ধন নম্বর এবং জন্ম
-                    তারিখ সঠিকভাবে লেখা হয়েছে। সামান্য টাইপ ভুল বা ভুল তারিখ
-                    ফরম্যাটের কারণেও তথ্য খুঁজে পাওয়া নাও যেতে পারে।
-                  </p>
-
-                  <p>
-                    তথ্য সঠিক হওয়ার পরেও যদি ফলাফল না আসে, তাহলে সম্ভবত রেকর্ডটি
-                    এখনো সম্পূর্ণভাবে ডিজিটালাইজড হয়নি অথবা সরকারি ডাটাবেজে
-                    আপডেট করা হয়নি। এ ক্ষেত্রে যে ইউনিয়ন পরিষদ, পৌরসভা বা সিটি
-                    কর্পোরেশন অফিস থেকে জন্ম নিবন্ধন করা হয়েছিল সেখানে যোগাযোগ
-                    করতে হতে পারে।
-                  </p>
-
-                  <p>
-                    প্রয়োজন হলে পুরোনো জন্ম সনদের কপি, বাবা-মায়ের জাতীয়
-                    পরিচয়পত্র, শিক্ষাপ্রতিষ্ঠানের সনদ বা অন্যান্য পরিচয়পত্র জমা
-                    দিতে হতে পারে। যাচাই শেষে স্থানীয় কর্তৃপক্ষ তথ্য আপডেট বা
-                    সংশোধন করতে পারে।
-                  </p>
-
-                  <p>
-                    অনেক সময় নামের বানান ভুল, জন্ম তারিখের অমিল বা অসম্পূর্ণ
-                    তথ্যের কারণেও অনলাইন যাচাই ব্যর্থ হতে পারে। সংশোধন সম্পন্ন
-                    হলে সাধারণত ডিজিটাল জন্ম সনদ অনলাইনে দেখা যায়।
-                  </p>
-                </>
-              )}
-            </div>
+                ? "This website is not affiliated with the Government of Bangladesh and is not an official government website. This platform is created as an independent helper tool to make it easier for people to access Bangladesh government service information such as digital birth certificate verification, birth registration guidance, and online document-related instructions."
+                : "এই ওয়েবসাইটটি বাংলাদেশ সরকারের সাথে সংশ্লিষ্ট নয় এবং এটি কোনো অফিসিয়াল সরকারি ওয়েবসাইট নয়। সাধারণ মানুষের জন্য জন্ম নিবন্ধন যাচাই, জন্ম সনদ সম্পর্কিত নির্দেশনা এবং সরকারি অনলাইন সেবা সহজভাবে ব্যবহার করার সহায়ক প্ল্যাটফর্ম হিসেবে এই ওয়েবসাইট তৈরি করা হয়েছে।"}
+            </p>
           </div>
 
-          <div className="mt-12">
+          {/* How to Download or Print Digital Birth Certificate in Bangladesh */}
+          <div id="birth-certificate-download" className="mt-12">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
               {currentLang === "en"
                 ? "How to Download or Print Digital Birth Certificate in Bangladesh"
@@ -703,7 +583,198 @@ export default async function BirthCertificateCheck({
             </div>
           </div>
 
-          <div className="mt-12">
+          {/* Birth Certificate Not Found */}
+          <div id="birth-certificate-not-found" className="mt-12">
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+              {currentLang === "en"
+                ? "What to do if the digital birth certificate is not found"
+                : "ডিজিটাল জন্ম সনদ খুঁজে না পেলে কী করবেন"}
+            </h2>
+
+            <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4 text-gray-700 leading-8">
+              {currentLang === "en" ? (
+                <>
+                  <p>
+                    Sometimes the digital birth certificate may not appear even
+                    after entering the correct Birth Registration Number and
+                    Date of Birth. This can happen for several reasons,
+                    especially for older birth records that were originally
+                    maintained in paper format and later transferred into the
+                    digital database.
+                  </p>
+
+                  <p>
+                    First, carefully check whether the 17-digit Birth
+                    Registration Number and Date of Birth were entered
+                    correctly. Even a small typing mistake or incorrect date
+                    format can prevent the system from finding the record.
+                  </p>
+
+                  <p>
+                    If the information is correct but no result is shown, it may
+                    mean the birth record has not yet been fully digitized or
+                    updated in the government database. In such cases, you may
+                    need to contact the local Union Parishad, Municipality, or
+                    City Corporation office where the birth registration was
+                    originally completed.
+                  </p>
+
+                  <p>
+                    You may be asked to provide supporting documents such as
+                    previous birth certificate copies, National ID cards of
+                    parents, school certificates, or other identity documents to
+                    verify the information. After verification, the local
+                    authority may update or correct the digital record in the
+                    system.
+                  </p>
+
+                  <p>
+                    In some cases, information mismatches such as spelling
+                    differences, incorrect dates, or incomplete records can also
+                    prevent successful verification. Once the correction process
+                    is completed, the updated digital birth certificate should
+                    become available online.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p>
+                    অনেক সময় সঠিক জন্ম নিবন্ধন নম্বর এবং জন্ম তারিখ দেওয়ার পরেও
+                    ডিজিটাল জন্ম সনদ দেখা নাও যেতে পারে। বিশেষ করে পুরোনো জন্ম
+                    নিবন্ধনের ক্ষেত্রে এমন হতে পারে, কারণ আগে অনেক তথ্য
+                    কাগজপত্রে সংরক্ষিত ছিল এবং পরে সেগুলো ডিজিটাল ডাটাবেজে
+                    স্থানান্তর করা হয়েছে।
+                  </p>
+
+                  <p>
+                    প্রথমে নিশ্চিত করুন যে ১৭ অংকের জন্ম নিবন্ধন নম্বর এবং জন্ম
+                    তারিখ সঠিকভাবে লেখা হয়েছে। সামান্য টাইপ ভুল বা ভুল তারিখ
+                    ফরম্যাটের কারণেও তথ্য খুঁজে পাওয়া নাও যেতে পারে।
+                  </p>
+
+                  <p>
+                    তথ্য সঠিক হওয়ার পরেও যদি ফলাফল না আসে, তাহলে সম্ভবত রেকর্ডটি
+                    এখনো সম্পূর্ণভাবে ডিজিটালাইজড হয়নি অথবা সরকারি ডাটাবেজে
+                    আপডেট করা হয়নি। এ ক্ষেত্রে যে ইউনিয়ন পরিষদ, পৌরসভা বা সিটি
+                    কর্পোরেশন অফিস থেকে জন্ম নিবন্ধন করা হয়েছিল সেখানে যোগাযোগ
+                    করতে হতে পারে।
+                  </p>
+
+                  <p>
+                    প্রয়োজন হলে পুরোনো জন্ম সনদের কপি, বাবা-মায়ের জাতীয়
+                    পরিচয়পত্র, শিক্ষাপ্রতিষ্ঠানের সনদ বা অন্যান্য পরিচয়পত্র জমা
+                    দিতে হতে পারে। যাচাই শেষে স্থানীয় কর্তৃপক্ষ তথ্য আপডেট বা
+                    সংশোধন করতে পারে।
+                  </p>
+
+                  <p>
+                    অনেক সময় নামের বানান ভুল, জন্ম তারিখের অমিল বা অসম্পূর্ণ
+                    তথ্যের কারণেও অনলাইন যাচাই ব্যর্থ হতে পারে। সংশোধন সম্পন্ন
+                    হলে সাধারণত ডিজিটাল জন্ম সনদ অনলাইনে দেখা যায়।
+                  </p>
+                </>
+              )}
+            </div>
+          </div>
+
+          {/* Digital Birth System */}
+          <div id="digital-birth-system" className="mt-10">
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+              {currentLang === "en"
+                ? "Digital Birth Certificate System in Bangladesh"
+                : "বাংলাদেশে ডিজিটাল জন্ম নিবন্ধন ব্যবস্থা"}
+            </h2>
+
+            <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4 text-gray-700 leading-8">
+              {currentLang === "en" ? (
+                <>
+                  <p>
+                    In Bangladesh, birth registration was traditionally
+                    maintained in paper records at local Union Parishad,
+                    Municipality, or City Corporation offices. For many years,
+                    people had to visit the chairman’s office or local
+                    government office physically to verify birth information or
+                    collect certified copies. Paper-based records were often
+                    difficult to preserve, vulnerable to damage, and
+                    time-consuming to search manually.
+                  </p>
+
+                  <p>
+                    To modernize public services, the Government of Bangladesh
+                    introduced a digital birth registration system under the
+                    Birth and Death Registration Information System (BDRIS).
+                    Today, millions of birth records are stored digitally in the
+                    government database, making verification faster, easier, and
+                    more secure. Citizens can now verify a digital birth
+                    certificate online using the Birth Registration Number and
+                    Date of Birth through the official verification portal.
+                  </p>
+
+                  <p>
+                    A digital birth certificate is now an essential document for
+                    many important services in Bangladesh. It is commonly
+                    required for school admission, passport application,
+                    National ID related processes, mobile SIM registration, bank
+                    account opening, and various government or private services.
+                    In many cases, parents are also required to have their own
+                    digital birth certificates registered before applying for a
+                    birth certificate for their child.
+                  </p>
+
+                  <p>
+                    The digitization process has significantly improved record
+                    management and reduced the risk of errors or duplicate
+                    information. Online verification also helps confirm whether
+                    the provided Birth Registration Number and Date of Birth
+                    match official government records, helping reduce fraud and
+                    misinformation.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p>
+                    বাংলাদেশে আগে জন্ম নিবন্ধনের তথ্য মূলত কাগজপত্রের মাধ্যমে
+                    সংরক্ষণ করা হতো। ইউনিয়ন পরিষদ চেয়ারম্যান অফিস, পৌরসভা বা
+                    সিটি কর্পোরেশন অফিসে হাতে লেখা রেজিস্টারে জন্ম নিবন্ধনের
+                    তথ্য রাখা হতো। কোনো তথ্য যাচাই বা জন্ম সনদের কপি সংগ্রহ করতে
+                    হলে অনেক সময় সরাসরি স্থানীয় অফিসে যেতে হতো। কাগজভিত্তিক এই
+                    পদ্ধতিতে তথ্য সংরক্ষণ কঠিন ছিল এবং পুরোনো রেকর্ড খুঁজে বের
+                    করতেও সময় লাগতো।
+                  </p>
+
+                  <p>
+                    পরবর্তীতে বাংলাদেশ সরকার Birth and Death Registration
+                    Information System (BDRIS) এর মাধ্যমে জন্ম নিবন্ধন
+                    প্রক্রিয়াকে ডিজিটালাইজ করে। বর্তমানে দেশের অসংখ্য জন্ম
+                    নিবন্ধনের তথ্য সরকারি ডাটাবেজে সংরক্ষিত রয়েছে। এখন জন্ম
+                    নিবন্ধন নম্বর এবং জন্ম তারিখ ব্যবহার করে অনলাইনে ডিজিটাল
+                    জন্ম সনদ যাচাই করা যায়, যা যাচাই প্রক্রিয়াকে দ্রুত, সহজ এবং
+                    নিরাপদ করেছে।
+                  </p>
+
+                  <p>
+                    বর্তমানে ডিজিটাল জন্ম সনদ বাংলাদেশে অত্যন্ত গুরুত্বপূর্ণ
+                    একটি ডকুমেন্ট। স্কুলে ভর্তি, পাসপোর্ট আবেদন, জাতীয় পরিচয়পত্র
+                    সম্পর্কিত কার্যক্রম, মোবাইল সিম নিবন্ধন, ব্যাংক একাউন্ট খোলা
+                    এবং বিভিন্ন সরকারি ও বেসরকারি সেবার জন্য এটি প্রয়োজন হয়।
+                    অনেক ক্ষেত্রে শিশুর জন্ম সনদ করার সময় বাবা-মায়ের ডিজিটাল
+                    জন্ম নিবন্ধন তথ্যও প্রয়োজন হয়।
+                  </p>
+
+                  <p>
+                    জন্ম নিবন্ধনের ডিজিটালাইজেশন তথ্য সংরক্ষণ ব্যবস্থাকে আরও
+                    উন্নত করেছে এবং ভুল তথ্য বা ডুপ্লিকেট রেকর্ডের ঝুঁকি
+                    কমিয়েছে। অনলাইন যাচাইয়ের মাধ্যমে জন্ম নিবন্ধন নম্বর ও জন্ম
+                    তারিখ সরকারি রেকর্ডের সাথে মিলিয়ে দেখা যায়, যা জালিয়াতি ও
+                    ভুল তথ্য প্রতিরোধে সহায়তা করে।
+                  </p>
+                </>
+              )}
+            </div>
+          </div>
+
+          {/* How to Convert an Old Birth Certificate to a Digital Birth Certificate in Bangladesh */}
+          <div id="birth-certificate-digitization" className="mt-12">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
               {currentLang === "en"
                 ? "How to Convert an Old Birth Certificate to a Digital Birth Certificate in Bangladesh"
@@ -824,28 +895,152 @@ export default async function BirthCertificateCheck({
             </div>
           </div>
 
-          <div className="mt-10">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              {t.importance.title}
+          {/* Importance of Digital Birth Certificate in Bangladesh */}
+          <div id="birth-certificate-importance" className="mt-12">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              {currentLang === "en"
+                ? "Why Digital Birth Certificate Verification is Important in Bangladesh"
+                : "বাংলাদেশে ডিজিটাল জন্ম সনদ যাচাই কেন গুরুত্বপূর্ণ"}
             </h2>
-            <div className="grid grid-cols-1 gap-4">
-              {t.importance.blocks.map((b) => (
-                <div
-                  key={b.title}
-                  className="bg-white rounded-xl border border-gray-200 p-5"
-                >
-                  <h3 className="text-base font-semibold text-gray-900 mb-1">
-                    {b.title}
-                  </h3>
-                  <p className="text-sm text-gray-700 leading-relaxed">
-                    {b.text}
+
+            <div className="bg-white rounded-xl border border-gray-200 p-6 text-gray-700 leading-8 mb-6">
+              {currentLang === "en" ? (
+                <>
+                  <p className="mb-4">
+                    A Bangladesh digital birth certificate is currently one of
+                    the most important identity-related documents for citizens.
+                    Online birth registration verification helps people confirm
+                    whether their birth registration information is correctly
+                    stored in the government database through the official Birth
+                    and Death Registration Information System (BDRIS).
                   </p>
-                </div>
-              ))}
+
+                  <p>
+                    Digital birth certificates are widely required in Bangladesh
+                    for passport applications, National ID (NID) related
+                    services, school admission, visa processing, bank account
+                    opening, mobile SIM registration, and many other public or
+                    private services. Online verification also helps users
+                    download, print, and save birth certificate PDF copies more
+                    easily.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p className="mb-4">
+                    বাংলাদেশে ডিজিটাল জন্ম সনদ বর্তমানে সবচেয়ে গুরুত্বপূর্ণ
+                    পরিচয়ভিত্তিক ডকুমেন্টগুলোর একটি। অনলাইন জন্ম নিবন্ধন
+                    যাচাইয়ের মাধ্যমে সরকারি Birth and Death Registration
+                    Information System (BDRIS) ডাটাবেজে জন্ম নিবন্ধনের তথ্য
+                    সঠিকভাবে সংরক্ষিত আছে কিনা তা নিশ্চিত করা যায়।
+                  </p>
+
+                  <p>
+                    বাংলাদেশে পাসপোর্ট আবেদন, জাতীয় পরিচয়পত্র (এনআইডি) সংক্রান্ত
+                    সেবা, স্কুল ভর্তি, ভিসা আবেদন, ব্যাংক একাউন্ট খোলা, মোবাইল
+                    সিম নিবন্ধনসহ বিভিন্ন সরকারি ও বেসরকারি কাজে ডিজিটাল জন্ম
+                    সনদ প্রয়োজন হয়। অনলাইন যাচাইয়ের মাধ্যমে জন্ম সনদের PDF
+                    ডাউনলোড, প্রিন্ট এবং তথ্য যাচাইও সহজ হয়।
+                  </p>
+                </>
+              )}
+            </div>
+
+            <div className="grid grid-cols-1 gap-4">
+              {/* Card 1 */}
+              <div className="bg-white rounded-xl border border-gray-200 p-5">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {currentLang === "en"
+                    ? "Faster online birth certificate verification"
+                    : "দ্রুত অনলাইন জন্ম সনদ যাচাই"}
+                </h3>
+
+                <p className="text-gray-700 leading-7">
+                  {currentLang === "en"
+                    ? "Digital birth certificate verification allows citizens to instantly verify birth registration information online using Birth Registration Number and Date of Birth. This reduces the need for repeated visits to Union Parishad, Municipality, or City Corporation offices."
+                    : "ডিজিটাল জন্ম সনদ যাচাইয়ের মাধ্যমে জন্ম নিবন্ধন নম্বর ও জন্ম তারিখ ব্যবহার করে অনলাইনে দ্রুত তথ্য যাচাই করা যায়। এতে ইউনিয়ন পরিষদ, পৌরসভা বা সিটি কর্পোরেশন অফিসে বারবার যাওয়ার প্রয়োজন কমে যায়।"}
+                </p>
+              </div>
+
+              {/* Card 2 */}
+              <div className="bg-white rounded-xl border border-gray-200 p-5">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {currentLang === "en"
+                    ? "Required for passport, NID, and education services"
+                    : "পাসপোর্ট, এনআইডি ও শিক্ষা সংক্রান্ত সেবায় প্রয়োজন"}
+                </h3>
+
+                <p className="text-gray-700 leading-7">
+                  {currentLang === "en"
+                    ? "In Bangladesh, digital birth certificates are commonly required for passport application, National ID registration, school admission, exam registration, visa processing, bank account opening, and many public or private services."
+                    : "বাংলাদেশে ডিজিটাল জন্ম সনদ পাসপোর্ট আবেদন, জাতীয় পরিচয়পত্র নিবন্ধন, স্কুল ভর্তি, পরীক্ষার নিবন্ধন, ভিসা প্রসেসিং, ব্যাংক একাউন্ট খোলা এবং বিভিন্ন সরকারি ও বেসরকারি সেবার জন্য প্রয়োজন হয়।"}
+                </p>
+              </div>
+
+              {/* Card 3 */}
+              <div className="bg-white rounded-xl border border-gray-200 p-5">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {currentLang === "en"
+                    ? "Helps identify incorrect or missing records"
+                    : "ভুল বা অনুপস্থিত তথ্য শনাক্ত করতে সহায়তা করে"}
+                </h3>
+
+                <p className="text-gray-700 leading-7">
+                  {currentLang === "en"
+                    ? "Online birth certificate checking helps identify spelling mistakes, incorrect birth dates, missing parent information, or records that have not yet been digitized in the BDRIS database."
+                    : "অনলাইন জন্ম সনদ যাচাইয়ের মাধ্যমে নামের বানান ভুল, জন্ম তারিখের সমস্যা, বাবা-মায়ের তথ্যের অসামঞ্জস্য বা এখনো ডিজিটালাইজ না হওয়া রেকর্ড শনাক্ত করা সহজ হয়।"}
+                </p>
+              </div>
+
+              {/* Card 4 */}
+              <div className="bg-white rounded-xl border border-gray-200 p-5">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {currentLang === "en"
+                    ? "Improves security and reduces fraud"
+                    : "নিরাপত্তা বৃদ্ধি ও জালিয়াতি কমাতে সহায়তা করে"}
+                </h3>
+
+                <p className="text-gray-700 leading-7">
+                  {currentLang === "en"
+                    ? "Digital verification helps confirm whether the Birth Registration Number and Date of Birth match official government records. This helps reduce duplicate registrations, misinformation, and document fraud."
+                    : "ডিজিটাল যাচাইয়ের মাধ্যমে জন্ম নিবন্ধন নম্বর ও জন্ম তারিখ সরকারি রেকর্ডের সাথে মিলিয়ে দেখা যায়। এতে ভুয়া তথ্য, ডুপ্লিকেট নিবন্ধন এবং জালিয়াতির ঝুঁকি কমে।"}
+                </p>
+              </div>
+
+              {/* Card 5 */}
+              <div className="bg-white rounded-xl border border-gray-200 p-5">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {currentLang === "en"
+                    ? "Supports long-term digital record preservation"
+                    : "দীর্ঘমেয়াদী ডিজিটাল রেকর্ড সংরক্ষণে সহায়ক"}
+                </h3>
+
+                <p className="text-gray-700 leading-7">
+                  {currentLang === "en"
+                    ? "Digital birth registration systems improve long-term preservation of citizen records and make it easier to retrieve birth certificate information whenever required."
+                    : "ডিজিটাল জন্ম নিবন্ধন ব্যবস্থা নাগরিকদের তথ্য দীর্ঘমেয়াদে সংরক্ষণ করতে সহায়তা করে এবং প্রয়োজনের সময় দ্রুত জন্ম সনদের তথ্য খুঁজে পাওয়া সহজ করে।"}
+                </p>
+              </div>
+
+              {/* Card 6 */}
+              <div className="bg-white rounded-xl border border-gray-200 p-5">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {currentLang === "en"
+                    ? "Useful for downloading and printing PDF birth certificates"
+                    : "PDF জন্ম সনদ ডাউনলোড ও প্রিন্টে সহায়ক"}
+                </h3>
+
+                <p className="text-gray-700 leading-7">
+                  {currentLang === "en"
+                    ? "After successful online verification, users can view, print, or save digital birth certificates as PDF files using modern web browsers such as Google Chrome, Microsoft Edge, and Mozilla Firefox."
+                    : "অনলাইন যাচাই সফল হলে ব্যবহারকারীরা Google Chrome, Microsoft Edge এবং Mozilla Firefox এর মতো আধুনিক ব্রাউজার ব্যবহার করে ডিজিটাল জন্ম সনদ PDF হিসেবে ডাউনলোড বা প্রিন্ট করতে পারেন।"}
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="mt-12">
+          {/* Frequently Asked Questions (FAQ) */}
+          <div id="birth-certificate-faq" className="mt-12">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">
               {currentLang === "en"
                 ? "Frequently Asked Questions (FAQ)"
