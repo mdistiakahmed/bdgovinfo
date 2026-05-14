@@ -1,3 +1,0 @@
-# Cloudflare Pages (and Netlify-style) static redirects
-# https://developers.cloudflare.com/pages/configuration/redirects/
-/ /en 302
