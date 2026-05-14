@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
+const BDRIS_UBRN_SEARCH = "https://everify.bdris.gov.bd/UBRNVerification/Search";
+
 const content = {
   en: {
     seo: {
@@ -21,7 +23,7 @@ const content = {
     notes: {
       officialPortal: "Official government portal",
       botChallenge:
-        "On the official portal you must also pass a bot challenge by summing two numbers.",
+        "Your details are submitted directly to the official portal in a new tab; complete any verification step shown there (for example captcha) and continue.",
       outcome:
         "If your record is digitized and the information matches, a digital birth certificate will be displayed.",
     },
@@ -67,7 +69,7 @@ const content = {
     notes: {
       officialPortal: "বাংলাদেশ সরকারের অফিসিয়াল পোর্টাল",
       botChallenge:
-        "অফিসিয়াল পোর্টালে যাচাই করতে দুইটি সংখ্যার যোগফল দিয়ে বট চ্যালেঞ্জ পাশ করতে হয়।",
+        "আপনার তথ্য সরাসরি অফিসিয়াল পোর্টালে নতুন ট্যাবে পাঠানো হয়; সেখানে ক্যাপচা বা অন্য যাচাই থাকলে সম্পন্ন করুন।",
       outcome:
         "আপনার তথ্য ডিজিটালাইজড থাকলে এবং তথ্য মিললে ডিজিটাল জন্ম সনদ দেখাবে।",
     },
@@ -148,7 +150,7 @@ export default async function BirthCertificateCheck({
   const { lang } = await params;
   const currentLang = (lang === "bn" ? "bn" : "en") as "en" | "bn";
   const t = content[currentLang];
-  const officialUrl = "https://everify.bdris.gov.bd/";
+  const officialUrl = "https://everify.bdris.gov.bd/UBRNVerification/";
 
   return (
     <div className="min-h-screen">
@@ -199,18 +201,19 @@ export default async function BirthCertificateCheck({
           <div className="bg-white rounded-xl shadow-lg p-8">
             <form
               className="space-y-6"
-              action={officialUrl}
-              method="get"
+              action={BDRIS_UBRN_SEARCH}
+              method="post"
               target="_blank"
-              rel="noreferrer"
             >
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="ubrn">
                   {t.fields.brn}
                 </label>
                 <input
-                  type="text"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  id="ubrn"
+                  type="number"
+                  name="UBRN"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                   placeholder={t.fields.brnPlaceholder}
                   inputMode="numeric"
                   autoComplete="off"
@@ -219,13 +222,16 @@ export default async function BirthCertificateCheck({
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="birth-date">
                   {t.fields.dob}
                 </label>
                 <input
+                  id="birth-date"
                   type="text"
+                  name="BirthDate"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder={t.fields.dobPlaceholder}
+                  pattern="\d{4}-\d{2}-\d{2}"
                   autoComplete="bday"
                   required
                 />
