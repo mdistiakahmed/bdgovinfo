@@ -1,7 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
-const BDRIS_UBRN_SEARCH = "https://everify.bdris.gov.bd/UBRNVerification/Search";
+const BDRIS_UBRN_SEARCH =
+  "https://everify.bdris.gov.bd/UBRNVerification/Search";
 
 const content = {
   en: {
@@ -48,7 +49,7 @@ const content = {
         },
       ],
     },
-    check: "Check on Official Portal",
+    check: "Check",
     back: "Back to Services",
   },
   bn: {
@@ -94,8 +95,7 @@ const content = {
         },
       ],
     },
-    check: "অফিসিয়াল পোর্টালে যাচাই করুন",
-    back: "সেবায় ফিরুন",
+    check: "সার্চ করুন",
   },
 };
 
@@ -206,7 +206,10 @@ export default async function BirthCertificateCheck({
               target="_blank"
             >
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="ubrn">
+                <label
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                  htmlFor="ubrn"
+                >
                   {t.fields.brn}
                 </label>
                 <input
@@ -222,7 +225,10 @@ export default async function BirthCertificateCheck({
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="birth-date">
+                <label
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                  htmlFor="birth-date"
+                >
                   {t.fields.dob}
                 </label>
                 <input
@@ -239,7 +245,7 @@ export default async function BirthCertificateCheck({
 
               <button
                 type="submit"
-                className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors font-medium"
+                className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors font-medium cursor-pointer"
               >
                 {t.check}
               </button>
@@ -247,14 +253,6 @@ export default async function BirthCertificateCheck({
 
             <div className="mt-6 flex items-center justify-between text-sm">
               <p className="text-sm text-gray-500">Last updated: May 2026</p>
-              <a
-                href={officialUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="text-blue-700 hover:text-blue-800 underline"
-              >
-                {officialUrl}
-              </a>
             </div>
           </div>
 

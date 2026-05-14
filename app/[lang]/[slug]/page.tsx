@@ -41,6 +41,7 @@ const SLUGS: Record<string, SlugDefinition> = {
       });
 
       const canonical = `${BASE_URL}/${lang}/digital-birth-certificate-check-bangladesh`;
+      const ogImage = `${BASE_URL}/birth_certificate.png`;
       return {
         ...metadata,
         alternates: {
@@ -54,6 +55,11 @@ const SLUGS: Record<string, SlugDefinition> = {
         openGraph: {
           ...metadata.openGraph,
           url: canonical,
+          images: [ogImage],
+        },
+        twitter: {
+          ...metadata.twitter,
+          images: [ogImage],
         },
       };
     },
@@ -72,6 +78,7 @@ const SLUGS: Record<string, SlugDefinition> = {
         lang === "bn"
           ? "বাংলাদেশে ডিজিটাল জন্ম সনদ/জন্ম নিবন্ধনের জন্য অনলাইনে আবেদন করার নিয়ম ও ফর্ম।"
           : "Apply for Bangladesh birth certificate registration online. Form fields, requirements, and steps.";
+      const ogImage = `${BASE_URL}/birth_certificate.png`;
       return {
         title,
         description,
@@ -88,11 +95,13 @@ const SLUGS: Record<string, SlugDefinition> = {
           url: canonical,
           siteName: "BDGovInfo",
           type: "website",
+          images: [ogImage],
         },
         twitter: {
           card: "summary_large_image",
           title,
           description,
+          images: [ogImage],
         },
         robots: {
           index: true,
@@ -129,7 +138,9 @@ const SLUGS: Record<string, SlugDefinition> = {
     },
   },
   "nid-registration-bangladesh": {
-    render: ({ lang }) => <NIDRegistration params={Promise.resolve({ lang })} />,
+    render: ({ lang }) => (
+      <NIDRegistration params={Promise.resolve({ lang })} />
+    ),
     generateMetadata: ({ lang }) => {
       const canonical = `${BASE_URL}/${lang}/nid-registration-bangladesh`;
       const title =
@@ -215,7 +226,9 @@ type PageProps = {
   params: Promise<{ lang: string; slug: string }>;
 };
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { lang, slug } = await params;
   const currentLang = normalizeLang(lang);
 
