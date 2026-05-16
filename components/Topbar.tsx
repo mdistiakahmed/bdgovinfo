@@ -46,7 +46,9 @@ const Topbar = ({ lang }: { lang: string }) => {
         },
         {
           name:
-            lang === "en" ? "NID Registration" : "এনআইডি নিবন্ধন (রেজিস্ট্রেশন)",
+            lang === "en"
+              ? "NID Registration"
+              : "এনআইডি নিবন্ধন (রেজিস্ট্রেশন)",
           href: `/${lang}/nid-registration-bangladesh`,
         },
       ],
@@ -62,8 +64,10 @@ const Topbar = ({ lang }: { lang: string }) => {
         },
         {
           name:
-            lang === "en" ? "Passport Application" : "পাসপোর্ট আবেদন (রেজিস্ট্রেশন)",
-          href: `/${lang}/passport-registration-bangladesh`,
+            lang === "en"
+              ? "Passport Application"
+              : "পাসপোর্ট আবেদন (রেজিস্ট্রেশন)",
+          href: `/${lang}/how-to-apply-e-passport-bangladesh-online`,
         },
       ],
     },
@@ -77,7 +81,8 @@ const Topbar = ({ lang }: { lang: string }) => {
     if (segments.length === 0) return `/${targetLang}`;
 
     const first = segments[0];
-    const rest = (first === "en" || first === "bn") ? segments.slice(1) : segments;
+    const rest =
+      first === "en" || first === "bn" ? segments.slice(1) : segments;
     return `/${targetLang}${rest.length ? `/${rest.join("/")}` : ""}`;
   };
 
@@ -216,7 +221,10 @@ const Topbar = ({ lang }: { lang: string }) => {
               const expanded = openMobileSection === item.id;
 
               return (
-                <div key={item.id} className="rounded-md overflow-hidden border border-gray-100">
+                <div
+                  key={item.id}
+                  className="rounded-md overflow-hidden border border-gray-100"
+                >
                   <button
                     type="button"
                     className={`w-full flex items-center justify-between px-3 py-2 text-base font-medium ${
@@ -226,7 +234,7 @@ const Topbar = ({ lang }: { lang: string }) => {
                     }`}
                     onClick={() =>
                       setOpenMobileSection((prev) =>
-                        prev === item.id ? null : item.id
+                        prev === item.id ? null : item.id,
                       )
                     }
                     aria-expanded={expanded}

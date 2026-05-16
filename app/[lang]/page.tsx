@@ -205,7 +205,7 @@ export default async function HomePage({
               </div>
               <div className="space-y-4">
                 <Link
-                  href={`/${currentLang}/passport-registration-bangladesh`}
+                  href={`/${currentLang}/how-to-apply-e-passport-bangladesh-online`}
                   className="block w-full text-center bg-red-600 text-white py-4 rounded-lg hover:bg-red-700 transition-colors font-medium"
                 >
                   {t.actions.registration}
