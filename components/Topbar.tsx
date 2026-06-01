@@ -60,7 +60,7 @@ const Topbar = ({ lang }: { lang: string }) => {
         {
           name:
             lang === "en" ? "Passport Check Online" : "পাসপোর্ট অনলাইনে যাচাই",
-          href: `/${lang}/passport-check-bangladesh`,
+          href: `/${lang}/check-bangladesh-e-passport-status-online`,
         },
         {
           name:
@@ -144,7 +144,7 @@ const Topbar = ({ lang }: { lang: string }) => {
                     </svg>
                   </button>
 
-                  <div className="absolute left-0 top-full z-50 pt-2 hidden group-hover:block group-focus-within:block">
+                  <div className="absolute left-[-100px] top-full z-50 pt-2 hidden group-hover:block group-focus-within:block">
                     <div className="min-w-64 rounded-xl border border-gray-200 bg-white shadow-lg overflow-hidden">
                       {item.children.map((child) => (
                         <Link
