@@ -168,7 +168,7 @@ export default async function PassportStatusPage({
               </li>
 
               <li>
-                <a href="#passport-faq" className="hover:underline">
+                <a href="#faq-section" className="hover:underline">
                   FAQ
                 </a>
               </li>
@@ -297,8 +297,6 @@ export default async function PassportStatusPage({
                   ? "You can find these details on the delivery slip provided by the passport office after completing your biometric enrollment. This slip is very important for tracking your application status online."
                   : "এই তথ্যগুলো আপনি বায়োমেট্রিক সম্পন্ন করার পর পাসপোর্ট অফিস থেকে পাওয়া ডেলিভারি স্লিপে পাবেন। অনলাইনে স্ট্যাটাস চেক করার জন্য এই স্লিপ অত্যন্ত গুরুত্বপূর্ণ।"}
               </p>
-
-
 
               <img
                 src="/passport/passport_delivery_slip.png"
@@ -498,6 +496,81 @@ export default async function PassportStatusPage({
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Related Pages Section */}
+          <div className="mt-12">
+            <h2 className="text-2xl font-semibold mb-6">
+              {currentLang === "en"
+                ? "Related Government Services"
+                : "সম্পর্কিত সরকারি সেবাসমূহ"}
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              <a
+                href={`/${currentLang}/how-to-apply-e-passport-bangladesh-online`}
+                className="block bg-white border border-gray-200 rounded-xl p-5 hover:border-blue-400 hover:shadow-md transition-all"
+              >
+                <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                  {currentLang === "en"
+                    ? "How to Apply for Bangladesh e-Passport Online"
+                    : "বাংলাদেশ ই-পাসপোর্ট অনলাইনে আবেদন করার নিয়ম"}
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  {currentLang === "en"
+                    ? "Complete guide to applying for e-passport online"
+                    : "ই-পাসপোর্ট অনলাইনে আবেদন করার সম্পূর্ণ নির্দেশিকা"}
+                </p>
+              </a>
+
+              <a
+                href={`/${currentLang}/nid-check-bangladesh`}
+                className="block bg-white border border-gray-200 rounded-xl p-5 hover:border-blue-400 hover:shadow-md transition-all"
+              >
+                <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                  {currentLang === "en"
+                    ? "Check NID Status Online"
+                    : "এনআইডি স্ট্যাটাস অনলাইনে চেক করুন"}
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  {currentLang === "en"
+                    ? "Verify your National ID card status online"
+                    : "আপনার জাতীয় পরিচয়পত্রের স্ট্যাটাস অনলাইনে যাচাই করুন"}
+                </p>
+              </a>
+
+              <a
+                href={`/${currentLang}/nid-registration-bangladesh`}
+                className="block bg-white border border-gray-200 rounded-xl p-5 hover:border-blue-400 hover:shadow-md transition-all"
+              >
+                <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                  {currentLang === "en"
+                    ? "NID Registration Bangladesh"
+                    : "বাংলাদেশ এনআইডি রেজিস্ট্রেশন"}
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  {currentLang === "en"
+                    ? "Apply for new National ID card registration"
+                    : "নতুন জাতীয় পরিচয়পত্রের জন্য আবেদন করুন"}
+                </p>
+              </a>
+
+              <a
+                href={`/${currentLang}/digital-birth-certificate-check-bangladesh`}
+                className="block bg-white border border-gray-200 rounded-xl p-5 hover:border-blue-400 hover:shadow-md transition-all"
+              >
+                <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                  {currentLang === "en"
+                    ? "Digital Birth Certificate Check"
+                    : "ডিজিটাল জন্ম সনদ যাচাই করুন"}
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  {currentLang === "en"
+                    ? "Check your birth certificate online"
+                    : "আপনার জন্ম সনদ অনলাইনে যাচাই করুন"}
+                </p>
+              </a>
             </div>
           </div>
         </div>
